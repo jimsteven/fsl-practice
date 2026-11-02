@@ -1,0 +1,6697 @@
+{
+  "evaluatedAt": "2026-11-02T16:18:26.778Z",
+  "modelVersion": "fsl105-numbers1-5-other-cnn-v2",
+  "modelHashes": {
+    "model": "18d54f87f353245e2a97a5bcd74056e9b0ef5bd63f20f6c2d92dfaf27f373952",
+    "weights": "b1ed586e8d03b88fa8e05b2ead953ca049ce30baed7a69444560864d3113ab10"
+  },
+  "environment": {
+    "node": "v26.13.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "backend": "cpu"
+  },
+  "split": "Original FSL105 test CSV, never used by training or threshold selection. Clip-disjoint only; signer IDs unavailable. Unseen-class negatives come from signs never used in training or calibration.",
+  "positiveClips": 19,
+  "rawTop1Correct": 19,
+  "acceptedCorrect": 11,
+  "acceptedWrong": 0,
+  "positiveAbstentions": 8,
+  "unsupportedClips": 405,
+  "unsupportedRejected": 404,
+  "unsupportedByGroup": {
+    "sixToTen": {
+      "clips": 19,
+      "rejected": 18
+    },
+    "seenClasses": {
+      "clips": 195,
+      "rejected": 195
+    },
+    "unseenClasses": {
+      "clips": 191,
+      "rejected": 191
+    }
+  },
+  "webcamHeldOut": null,
+  "confusionMatrix": [
+    [
+      4,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      4,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      4,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      3,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      4,
+      0
+    ]
+  ],
+  "labels": [
+    "One",
+    "Two",
+    "Three",
+    "Four",
+    "Five"
+  ],
+  "rows": [
+    {
+      "path": "clips/20/8.MOV",
+      "source": "fsl105",
+      "expected": 20,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 20,
+      "result": {
+        "status": "suggestion",
+        "label": "One",
+        "signId": "fsl105-20",
+        "score": 0.9999986886978149,
+        "distance": 0.038585603031225046
+      },
+      "classifierMs": 4.919541999999993
+    },
+    {
+      "path": "clips/20/6.MOV",
+      "source": "fsl105",
+      "expected": 20,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 20,
+      "result": {
+        "status": "unknown",
+        "reason": "novel-shape",
+        "label": null,
+        "score": 0.9999521970748901,
+        "distance": 0.08424990293614255
+      },
+      "classifierMs": 1.5085410000000081
+    },
+    {
+      "path": "clips/20/17.MOV",
+      "source": "fsl105",
+      "expected": 20,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 20,
+      "result": {
+        "status": "suggestion",
+        "label": "One",
+        "signId": "fsl105-20",
+        "score": 0.9999986886978149,
+        "distance": 0.03223978367214775
+      },
+      "classifierMs": 0.7375410000000073
+    },
+    {
+      "path": "clips/20/14.MOV",
+      "source": "fsl105",
+      "expected": 20,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 20,
+      "result": {
+        "status": "unknown",
+        "reason": "low-score",
+        "label": null,
+        "score": 0.9999306201934814,
+        "distance": 0.038404529634192414
+      },
+      "classifierMs": 0.6420410000000061
+    },
+    {
+      "path": "clips/21/17.MOV",
+      "source": "fsl105",
+      "expected": 21,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 21,
+      "result": {
+        "status": "suggestion",
+        "label": "Two",
+        "signId": "fsl105-21",
+        "score": 0.9999933242797852,
+        "distance": 0.06216268315698704
+      },
+      "classifierMs": 0.6484999999999985
+    },
+    {
+      "path": "clips/21/8.MOV",
+      "source": "fsl105",
+      "expected": 21,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 21,
+      "result": {
+        "status": "suggestion",
+        "label": "Two",
+        "signId": "fsl105-21",
+        "score": 0.9999943971633911,
+        "distance": 0.033636193760135144
+      },
+      "classifierMs": 0.6501659999999987
+    },
+    {
+      "path": "clips/21/16.MOV",
+      "source": "fsl105",
+      "expected": 21,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 21,
+      "result": {
+        "status": "suggestion",
+        "label": "Two",
+        "signId": "fsl105-21",
+        "score": 0.9999798536300659,
+        "distance": 0.07878604614940984
+      },
+      "classifierMs": 0.6013750000000044
+    },
+    {
+      "path": "clips/21/7.MOV",
+      "source": "fsl105",
+      "expected": 21,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 21,
+      "result": {
+        "status": "suggestion",
+        "label": "Two",
+        "signId": "fsl105-21",
+        "score": 0.9999896287918091,
+        "distance": 0.025834115072242373
+      },
+      "classifierMs": 0.5573329999999999
+    },
+    {
+      "path": "clips/22/1.MOV",
+      "source": "fsl105",
+      "expected": 22,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 22,
+      "result": {
+        "status": "suggestion",
+        "label": "Three",
+        "signId": "fsl105-22",
+        "score": 0.9999555349349976,
+        "distance": 0.0392505001121529
+      },
+      "classifierMs": 0.5826670000000007
+    },
+    {
+      "path": "clips/22/11.MOV",
+      "source": "fsl105",
+      "expected": 22,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 22,
+      "result": {
+        "status": "suggestion",
+        "label": "Three",
+        "signId": "fsl105-22",
+        "score": 0.9999071359634399,
+        "distance": 0.038828901242923125
+      },
+      "classifierMs": 0.4458750000000009
+    },
+    {
+      "path": "clips/22/13.MOV",
+      "source": "fsl105",
+      "expected": 22,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 22,
+      "result": {
+        "status": "unknown",
+        "reason": "low-score",
+        "label": null,
+        "score": 0.9998663663864136,
+        "distance": 0.07319506156936356
+      },
+      "classifierMs": 0.3692080000000004
+    },
+    {
+      "path": "clips/22/12.MOV",
+      "source": "fsl105",
+      "expected": 22,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 22,
+      "result": {
+        "status": "unknown",
+        "reason": "low-score",
+        "label": null,
+        "score": 0.991037130355835,
+        "distance": 0.14521539695515256
+      },
+      "classifierMs": 0.365791999999999
+    },
+    {
+      "path": "clips/23/3.MOV",
+      "source": "fsl105",
+      "expected": 23,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 23,
+      "result": {
+        "status": "suggestion",
+        "label": "Four",
+        "signId": "fsl105-23",
+        "score": 0.9982523322105408,
+        "distance": 0.05888141812368234
+      },
+      "classifierMs": 0.33208299999999724
+    },
+    {
+      "path": "clips/23/14.MOV",
+      "source": "fsl105",
+      "expected": 23,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 23,
+      "result": {
+        "status": "unknown",
+        "reason": "novel-shape",
+        "label": null,
+        "score": 0.9724675416946411,
+        "distance": 0.08220305660229661
+      },
+      "classifierMs": 0.3909579999999977
+    },
+    {
+      "path": "clips/23/15.MOV",
+      "source": "fsl105",
+      "expected": 23,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 23,
+      "result": {
+        "status": "unknown",
+        "reason": "novel-shape",
+        "label": null,
+        "score": 0.9979812502861023,
+        "distance": 0.07333842126797928
+      },
+      "classifierMs": 0.34695800000000077
+    },
+    {
+      "path": "clips/24/13.MOV",
+      "source": "fsl105",
+      "expected": 24,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 0.8333333333333334,
+      "rawTop1": 24,
+      "result": {
+        "status": "suggestion",
+        "label": "Five",
+        "signId": "fsl105-24",
+        "score": 0.8756069540977478,
+        "distance": 0.0340980245852406
+      },
+      "classifierMs": 0.3340419999999966
+    },
+    {
+      "path": "clips/24/17.MOV",
+      "source": "fsl105",
+      "expected": 24,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 0.8333333333333334,
+      "rawTop1": 24,
+      "result": {
+        "status": "unknown",
+        "reason": "low-score",
+        "label": null,
+        "score": 0.3675995469093323,
+        "distance": 0.06287532897788284
+      },
+      "classifierMs": 0.36366599999999494
+    },
+    {
+      "path": "clips/24/19.MOV",
+      "source": "fsl105",
+      "expected": 24,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 1,
+      "rawTop1": 24,
+      "result": {
+        "status": "unknown",
+        "reason": "novel-shape",
+        "label": null,
+        "score": 0.8264970779418945,
+        "distance": 0.061978761770577886
+      },
+      "classifierMs": 0.3853340000000003
+    },
+    {
+      "path": "clips/24/5.MOV",
+      "source": "fsl105",
+      "expected": 24,
+      "supported": true,
+      "negativeGroup": null,
+      "coverage": 0.8333333333333334,
+      "rawTop1": 24,
+      "result": {
+        "status": "suggestion",
+        "label": "Five",
+        "signId": "fsl105-24",
+        "score": 0.7126346826553345,
+        "distance": 0.042395044977480034
+      },
+      "classifierMs": 0.403624999999991
+    },
+    {
+      "path": "clips/25/7.MOV",
+      "source": "fsl105",
+      "expected": 25,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9952386617660522
+      },
+      "classifierMs": 0.34662500000000307
+    },
+    {
+      "path": "clips/25/2.MOV",
+      "source": "fsl105",
+      "expected": 25,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9988445043563843
+      },
+      "classifierMs": 0.3049999999999926
+    },
+    {
+      "path": "clips/25/15.MOV",
+      "source": "fsl105",
+      "expected": 25,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.8777133226394653
+      },
+      "classifierMs": 0.2986659999999972
+    },
+    {
+      "path": "clips/25/19.MOV",
+      "source": "fsl105",
+      "expected": 25,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9563535451889038
+      },
+      "classifierMs": 0.32229199999999025
+    },
+    {
+      "path": "clips/26/5.MOV",
+      "source": "fsl105",
+      "expected": 26,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999642372131348
+      },
+      "classifierMs": 0.3111250000000041
+    },
+    {
+      "path": "clips/26/1.MOV",
+      "source": "fsl105",
+      "expected": 26,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999439716339111
+      },
+      "classifierMs": 0.29429199999999867
+    },
+    {
+      "path": "clips/26/8.MOV",
+      "source": "fsl105",
+      "expected": 26,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": 23,
+      "result": {
+        "status": "suggestion",
+        "label": "Four",
+        "signId": "fsl105-23",
+        "score": 0.9978078007698059,
+        "distance": 0.02167066385586893
+      },
+      "classifierMs": 0.3222499999999968
+    },
+    {
+      "path": "clips/27/17.MOV",
+      "source": "fsl105",
+      "expected": 27,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999868869781494
+      },
+      "classifierMs": 0.3170420000000007
+    },
+    {
+      "path": "clips/27/15.MOV",
+      "source": "fsl105",
+      "expected": 27,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999972581863403
+      },
+      "classifierMs": 0.33158299999999485
+    },
+    {
+      "path": "clips/27/13.MOV",
+      "source": "fsl105",
+      "expected": 27,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999868869781494
+      },
+      "classifierMs": 0.31858300000000384
+    },
+    {
+      "path": "clips/27/1.MOV",
+      "source": "fsl105",
+      "expected": 27,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999706745147705
+      },
+      "classifierMs": 0.2829579999999936
+    },
+    {
+      "path": "clips/28/6.MOV",
+      "source": "fsl105",
+      "expected": 28,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9996873140335083
+      },
+      "classifierMs": 0.3171250000000043
+    },
+    {
+      "path": "clips/28/7.MOV",
+      "source": "fsl105",
+      "expected": 28,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9988278746604919
+      },
+      "classifierMs": 0.3057500000000033
+    },
+    {
+      "path": "clips/28/11.MOV",
+      "source": "fsl105",
+      "expected": 28,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 0.75,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9897659420967102
+      },
+      "classifierMs": 0.2752920000000074
+    },
+    {
+      "path": "clips/28/9.MOV",
+      "source": "fsl105",
+      "expected": 28,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9997215867042542
+      },
+      "classifierMs": 0.29708300000000065
+    },
+    {
+      "path": "clips/29/11.MOV",
+      "source": "fsl105",
+      "expected": 29,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2980000000000018
+    },
+    {
+      "path": "clips/29/6.MOV",
+      "source": "fsl105",
+      "expected": 29,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.27787499999999454
+    },
+    {
+      "path": "clips/29/2.MOV",
+      "source": "fsl105",
+      "expected": 29,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.5137079999999941
+    },
+    {
+      "path": "clips/29/0.MOV",
+      "source": "fsl105",
+      "expected": 29,
+      "supported": false,
+      "negativeGroup": "six-ten",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.25395799999999724
+    },
+    {
+      "path": "clips/0/17.MOV",
+      "source": "fsl105",
+      "expected": 0,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.3117500000000035
+    },
+    {
+      "path": "clips/0/16.MOV",
+      "source": "fsl105",
+      "expected": 0,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.299666000000002
+    },
+    {
+      "path": "clips/0/1.MOV",
+      "source": "fsl105",
+      "expected": 0,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.9166666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.30887500000000045
+    },
+    {
+      "path": "clips/0/14.MOV",
+      "source": "fsl105",
+      "expected": 0,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2960000000000065
+    },
+    {
+      "path": "clips/1/7.MOV",
+      "source": "fsl105",
+      "expected": 1,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.9166666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.30279099999999914
+    },
+    {
+      "path": "clips/1/13.MOV",
+      "source": "fsl105",
+      "expected": 1,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2959589999999963
+    },
+    {
+      "path": "clips/1/20.MOV",
+      "source": "fsl105",
+      "expected": 1,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.75,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.29075000000000273
+    },
+    {
+      "path": "clips/1/10.MOV",
+      "source": "fsl105",
+      "expected": 1,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2845410000000044
+    },
+    {
+      "path": "clips/2/20.MOV",
+      "source": "fsl105",
+      "expected": 2,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2807499999999976
+    },
+    {
+      "path": "clips/2/16.MOV",
+      "source": "fsl105",
+      "expected": 2,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2692080000000061
+    },
+    {
+      "path": "clips/2/15.MOV",
+      "source": "fsl105",
+      "expected": 2,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2783330000000035
+    },
+    {
+      "path": "clips/2/0.MOV",
+      "source": "fsl105",
+      "expected": 2,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2823749999999876
+    },
+    {
+      "path": "clips/2/9.MOV",
+      "source": "fsl105",
+      "expected": 2,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2852919999999983
+    },
+    {
+      "path": "clips/3/19.MOV",
+      "source": "fsl105",
+      "expected": 3,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9998618364334106
+      },
+      "classifierMs": 0.28008299999999053
+    },
+    {
+      "path": "clips/3/4.MOV",
+      "source": "fsl105",
+      "expected": 3,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999994039535522
+      },
+      "classifierMs": 0.25287500000000307
+    },
+    {
+      "path": "clips/3/3.MOV",
+      "source": "fsl105",
+      "expected": 3,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2683749999999918
+    },
+    {
+      "path": "clips/3/6.MOV",
+      "source": "fsl105",
+      "expected": 3,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.75,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999828338623047
+      },
+      "classifierMs": 0.2645419999999916
+    },
+    {
+      "path": "clips/4/11.MOV",
+      "source": "fsl105",
+      "expected": 4,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.75,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2792089999999945
+    },
+    {
+      "path": "clips/4/5.MOV",
+      "source": "fsl105",
+      "expected": 4,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.5,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.27958299999998815
+    },
+    {
+      "path": "clips/4/17.MOV",
+      "source": "fsl105",
+      "expected": 4,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2569160000000039
+    },
+    {
+      "path": "clips/4/4.MOV",
+      "source": "fsl105",
+      "expected": 4,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.7916666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.26474999999999227
+    },
+    {
+      "path": "clips/5/12.MOV",
+      "source": "fsl105",
+      "expected": 5,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2912499999999909
+    },
+    {
+      "path": "clips/5/7.MOV",
+      "source": "fsl105",
+      "expected": 5,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999995231628418
+      },
+      "classifierMs": 0.2778330000000011
+    },
+    {
+      "path": "clips/5/6.MOV",
+      "source": "fsl105",
+      "expected": 5,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.25337499999999125
+    },
+    {
+      "path": "clips/5/9.MOV",
+      "source": "fsl105",
+      "expected": 5,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999994039535522
+      },
+      "classifierMs": 0.25037499999999113
+    },
+    {
+      "path": "clips/6/14.MOV",
+      "source": "fsl105",
+      "expected": 6,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.75,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.28145800000000065
+    },
+    {
+      "path": "clips/6/20.MOV",
+      "source": "fsl105",
+      "expected": 6,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.999974250793457
+      },
+      "classifierMs": 0.2558340000000072
+    },
+    {
+      "path": "clips/6/18.MOV",
+      "source": "fsl105",
+      "expected": 6,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.24483299999999986
+    },
+    {
+      "path": "clips/6/4.MOV",
+      "source": "fsl105",
+      "expected": 6,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.6666666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999964237213135
+      },
+      "classifierMs": 0.26183399999999324
+    },
+    {
+      "path": "clips/6/9.MOV",
+      "source": "fsl105",
+      "expected": 6,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.2446249999999992
+    },
+    {
+      "path": "clips/7/6.MOV",
+      "source": "fsl105",
+      "expected": 7,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.2811659999999989
+    },
+    {
+      "path": "clips/7/16.MOV",
+      "source": "fsl105",
+      "expected": 7,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.24741699999999867
+    },
+    {
+      "path": "clips/7/9.MOV",
+      "source": "fsl105",
+      "expected": 7,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.23716699999999946
+    },
+    {
+      "path": "clips/7/15.MOV",
+      "source": "fsl105",
+      "expected": 7,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": 24,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.25166699999999764
+    },
+    {
+      "path": "clips/8/9.MOV",
+      "source": "fsl105",
+      "expected": 8,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.26950000000000784
+    },
+    {
+      "path": "clips/8/19.MOV",
+      "source": "fsl105",
+      "expected": 8,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": 20,
+      "result": {
+        "status": "unknown",
+        "reason": "low-score",
+        "label": null,
+        "score": 0.9798407554626465,
+        "distance": 0.6524590890968678
+      },
+      "classifierMs": 0.38374999999999204
+    },
+    {
+      "path": "clips/8/7.MOV",
+      "source": "fsl105",
+      "expected": 8,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999998807907104
+      },
+      "classifierMs": 0.29454200000000696
+    },
+    {
+      "path": "clips/8/2.MOV",
+      "source": "fsl105",
+      "expected": 8,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999997615814209
+      },
+      "classifierMs": 0.2646249999999952
+    },
+    {
+      "path": "clips/9/4.MOV",
+      "source": "fsl105",
+      "expected": 9,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.28941700000001447
+    },
+    {
+      "path": "clips/9/15.MOV",
+      "source": "fsl105",
+      "expected": 9,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.24954199999999105
+    },
+    {
+      "path": "clips/9/18.MOV",
+      "source": "fsl105",
+      "expected": 9,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.25199999999998113
+    },
+    {
+      "path": "clips/9/9.MOV",
+      "source": "fsl105",
+      "expected": 9,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2544170000000179
+    },
+    {
+      "path": "clips/10/3.MOV",
+      "source": "fsl105",
+      "expected": 10,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9915909767150879
+      },
+      "classifierMs": 0.2603340000000003
+    },
+    {
+      "path": "clips/10/7.MOV",
+      "source": "fsl105",
+      "expected": 10,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999998807907104
+      },
+      "classifierMs": 0.2817919999999958
+    },
+    {
+      "path": "clips/10/14.MOV",
+      "source": "fsl105",
+      "expected": 10,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.625,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2657920000000047
+    },
+    {
+      "path": "clips/10/18.MOV",
+      "source": "fsl105",
+      "expected": 10,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999995231628418
+      },
+      "classifierMs": 0.2735409999999945
+    },
+    {
+      "path": "clips/11/5.MOV",
+      "source": "fsl105",
+      "expected": 11,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2871250000000032
+    },
+    {
+      "path": "clips/11/1.MOV",
+      "source": "fsl105",
+      "expected": 11,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2897920000000056
+    },
+    {
+      "path": "clips/11/17.MOV",
+      "source": "fsl105",
+      "expected": 11,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.29537500000000705
+    },
+    {
+      "path": "clips/11/10.MOV",
+      "source": "fsl105",
+      "expected": 11,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.5234169999999949
+    },
+    {
+      "path": "clips/12/14.MOV",
+      "source": "fsl105",
+      "expected": 12,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999998807907104
+      },
+      "classifierMs": 0.24524999999999864
+    },
+    {
+      "path": "clips/12/16.MOV",
+      "source": "fsl105",
+      "expected": 12,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.22129200000000537
+    },
+    {
+      "path": "clips/12/11.MOV",
+      "source": "fsl105",
+      "expected": 12,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999978542327881
+      },
+      "classifierMs": 0.20733300000000554
+    },
+    {
+      "path": "clips/12/8.MOV",
+      "source": "fsl105",
+      "expected": 12,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999996423721313
+      },
+      "classifierMs": 0.20983400000000074
+    },
+    {
+      "path": "clips/13/18.MOV",
+      "source": "fsl105",
+      "expected": 13,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999997615814209
+      },
+      "classifierMs": 0.22254100000000676
+    },
+    {
+      "path": "clips/13/9.MOV",
+      "source": "fsl105",
+      "expected": 13,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999788999557495
+      },
+      "classifierMs": 0.20483300000000781
+    },
+    {
+      "path": "clips/13/6.MOV",
+      "source": "fsl105",
+      "expected": 13,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999827146530151
+      },
+      "classifierMs": 0.21545799999998394
+    },
+    {
+      "path": "clips/13/15.MOV",
+      "source": "fsl105",
+      "expected": 13,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999996423721313
+      },
+      "classifierMs": 0.2151670000000081
+    },
+    {
+      "path": "clips/14/12.MOV",
+      "source": "fsl105",
+      "expected": 14,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999966621398926
+      },
+      "classifierMs": 0.20729199999999537
+    },
+    {
+      "path": "clips/14/5.MOV",
+      "source": "fsl105",
+      "expected": 14,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999616146087646
+      },
+      "classifierMs": 0.20137499999998454
+    },
+    {
+      "path": "clips/14/14.MOV",
+      "source": "fsl105",
+      "expected": 14,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9997190833091736
+      },
+      "classifierMs": 0.2248339999999871
+    },
+    {
+      "path": "clips/14/2.MOV",
+      "source": "fsl105",
+      "expected": 14,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9997460246086121
+      },
+      "classifierMs": 0.20524999999997817
+    },
+    {
+      "path": "clips/15/6.MOV",
+      "source": "fsl105",
+      "expected": 15,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2018330000000219
+    },
+    {
+      "path": "clips/15/18.MOV",
+      "source": "fsl105",
+      "expected": 15,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999998807907104
+      },
+      "classifierMs": 0.2097919999999931
+    },
+    {
+      "path": "clips/15/17.MOV",
+      "source": "fsl105",
+      "expected": 15,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999996423721313
+      },
+      "classifierMs": 0.20833300000001032
+    },
+    {
+      "path": "clips/15/2.MOV",
+      "source": "fsl105",
+      "expected": 15,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20324999999999704
+    },
+    {
+      "path": "clips/16/17.MOV",
+      "source": "fsl105",
+      "expected": 16,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999991655349731
+      },
+      "classifierMs": 0.20087500000002478
+    },
+    {
+      "path": "clips/16/16.MOV",
+      "source": "fsl105",
+      "expected": 16,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20112499999999045
+    },
+    {
+      "path": "clips/16/9.MOV",
+      "source": "fsl105",
+      "expected": 16,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999926090240479
+      },
+      "classifierMs": 0.19575000000000387
+    },
+    {
+      "path": "clips/16/5.MOV",
+      "source": "fsl105",
+      "expected": 16,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999974966049194
+      },
+      "classifierMs": 0.19674999999998022
+    },
+    {
+      "path": "clips/17/18.MOV",
+      "source": "fsl105",
+      "expected": 17,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.20283299999999826
+    },
+    {
+      "path": "clips/17/17.MOV",
+      "source": "fsl105",
+      "expected": 17,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.75,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.22512499999999136
+    },
+    {
+      "path": "clips/17/12.MOV",
+      "source": "fsl105",
+      "expected": 17,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.5,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.21212500000001455
+    },
+    {
+      "path": "clips/17/15.MOV",
+      "source": "fsl105",
+      "expected": 17,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.18729199999998514
+    },
+    {
+      "path": "clips/17/4.MOV",
+      "source": "fsl105",
+      "expected": 17,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.625,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.21870799999999235
+    },
+    {
+      "path": "clips/18/11.MOV",
+      "source": "fsl105",
+      "expected": 18,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.4583333333333333,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1973340000000121
+    },
+    {
+      "path": "clips/18/4.MOV",
+      "source": "fsl105",
+      "expected": 18,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999992847442627
+      },
+      "classifierMs": 0.20341600000000426
+    },
+    {
+      "path": "clips/18/2.MOV",
+      "source": "fsl105",
+      "expected": 18,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.6666666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999998807907104
+      },
+      "classifierMs": 0.20129199999999514
+    },
+    {
+      "path": "clips/18/3.MOV",
+      "source": "fsl105",
+      "expected": 18,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.7916666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2128330000000176
+    },
+    {
+      "path": "clips/19/1.MOV",
+      "source": "fsl105",
+      "expected": 19,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2100409999999897
+    },
+    {
+      "path": "clips/19/12.MOV",
+      "source": "fsl105",
+      "expected": 19,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999984502792358
+      },
+      "classifierMs": 0.22450000000000614
+    },
+    {
+      "path": "clips/19/5.MOV",
+      "source": "fsl105",
+      "expected": 19,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20154199999998923
+    },
+    {
+      "path": "clips/19/6.MOV",
+      "source": "fsl105",
+      "expected": 19,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20545800000002146
+    },
+    {
+      "path": "clips/30/7.MOV",
+      "source": "fsl105",
+      "expected": 30,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.20599999999998886
+    },
+    {
+      "path": "clips/30/3.MOV",
+      "source": "fsl105",
+      "expected": 30,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.7789466977119446
+      },
+      "classifierMs": 0.20579200000000242
+    },
+    {
+      "path": "clips/30/2.MOV",
+      "source": "fsl105",
+      "expected": 30,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999984502792358
+      },
+      "classifierMs": 0.21016600000001517
+    },
+    {
+      "path": "clips/30/13.MOV",
+      "source": "fsl105",
+      "expected": 30,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9994984865188599
+      },
+      "classifierMs": 0.22262499999999363
+    },
+    {
+      "path": "clips/31/11.MOV",
+      "source": "fsl105",
+      "expected": 31,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.197749999999985
+    },
+    {
+      "path": "clips/31/7.MOV",
+      "source": "fsl105",
+      "expected": 31,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.3333333333333333,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.19599999999999795
+    },
+    {
+      "path": "clips/31/17.MOV",
+      "source": "fsl105",
+      "expected": 31,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.75,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9975998997688293
+      },
+      "classifierMs": 0.211749999999995
+    },
+    {
+      "path": "clips/31/13.MOV",
+      "source": "fsl105",
+      "expected": 31,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9995255470275879
+      },
+      "classifierMs": 0.2278750000000116
+    },
+    {
+      "path": "clips/32/16.MOV",
+      "source": "fsl105",
+      "expected": 32,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": 20,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1974999999999909
+    },
+    {
+      "path": "clips/32/7.MOV",
+      "source": "fsl105",
+      "expected": 32,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.20341700000000174
+    },
+    {
+      "path": "clips/32/17.MOV",
+      "source": "fsl105",
+      "expected": 32,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": 20,
+      "result": {
+        "status": "unknown",
+        "reason": "low-score",
+        "label": null,
+        "score": 0.9960202574729919,
+        "distance": 0.183074959368254
+      },
+      "classifierMs": 0.21645800000001714
+    },
+    {
+      "path": "clips/32/4.MOV",
+      "source": "fsl105",
+      "expected": 32,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19520800000000804
+    },
+    {
+      "path": "clips/33/8.MOV",
+      "source": "fsl105",
+      "expected": 33,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.7916666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999997615814209
+      },
+      "classifierMs": 0.19495900000001143
+    },
+    {
+      "path": "clips/33/6.MOV",
+      "source": "fsl105",
+      "expected": 33,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.6666666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9998579025268555
+      },
+      "classifierMs": 0.1996249999999975
+    },
+    {
+      "path": "clips/33/14.MOV",
+      "source": "fsl105",
+      "expected": 33,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.30129199999998946
+    },
+    {
+      "path": "clips/33/3.MOV",
+      "source": "fsl105",
+      "expected": 33,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": 20,
+      "result": {
+        "status": "unknown",
+        "reason": "low-score",
+        "label": null,
+        "score": 0.8774946331977844,
+        "distance": 0.18605386786530934
+      },
+      "classifierMs": 0.2980000000000018
+    },
+    {
+      "path": "clips/34/10.MOV",
+      "source": "fsl105",
+      "expected": 34,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.6666666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9438509345054626
+      },
+      "classifierMs": 0.23537500000000477
+    },
+    {
+      "path": "clips/34/6.MOV",
+      "source": "fsl105",
+      "expected": 34,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999998807907104
+      },
+      "classifierMs": 0.20566700000000537
+    },
+    {
+      "path": "clips/34/7.MOV",
+      "source": "fsl105",
+      "expected": 34,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.19149999999999068
+    },
+    {
+      "path": "clips/34/18.MOV",
+      "source": "fsl105",
+      "expected": 34,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999586343765259
+      },
+      "classifierMs": 0.20520799999999895
+    },
+    {
+      "path": "clips/35/16.MOV",
+      "source": "fsl105",
+      "expected": 35,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9996187686920166
+      },
+      "classifierMs": 0.508624999999995
+    },
+    {
+      "path": "clips/35/15.MOV",
+      "source": "fsl105",
+      "expected": 35,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": 20,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1877500000000225
+    },
+    {
+      "path": "clips/35/18.MOV",
+      "source": "fsl105",
+      "expected": 35,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19637499999998909
+    },
+    {
+      "path": "clips/35/9.MOV",
+      "source": "fsl105",
+      "expected": 35,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.6666666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999282360076904
+      },
+      "classifierMs": 0.19695799999999508
+    },
+    {
+      "path": "clips/36/0.MOV",
+      "source": "fsl105",
+      "expected": 36,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.18320900000000506
+    },
+    {
+      "path": "clips/36/2.MOV",
+      "source": "fsl105",
+      "expected": 36,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.7916666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19570799999999622
+    },
+    {
+      "path": "clips/36/17.MOV",
+      "source": "fsl105",
+      "expected": 36,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.6666666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.977408230304718
+      },
+      "classifierMs": 0.200917000000004
+    },
+    {
+      "path": "clips/36/14.MOV",
+      "source": "fsl105",
+      "expected": 36,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.19370900000001257
+    },
+    {
+      "path": "clips/37/21.MOV",
+      "source": "fsl105",
+      "expected": 37,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": 20,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.20650000000000546
+    },
+    {
+      "path": "clips/37/5.MOV",
+      "source": "fsl105",
+      "expected": 37,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1946670000000097
+    },
+    {
+      "path": "clips/37/3.MOV",
+      "source": "fsl105",
+      "expected": 37,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.21812500000001478
+    },
+    {
+      "path": "clips/37/2.MOV",
+      "source": "fsl105",
+      "expected": 37,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.19258400000001075
+    },
+    {
+      "path": "clips/37/18.MOV",
+      "source": "fsl105",
+      "expected": 37,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": 20,
+      "result": {
+        "status": "unknown",
+        "reason": "low-score",
+        "label": null,
+        "score": 0.8752599954605103,
+        "distance": 0.2321629890099844
+      },
+      "classifierMs": 0.2035410000000013
+    },
+    {
+      "path": "clips/38/2.MOV",
+      "source": "fsl105",
+      "expected": 38,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.18779200000000174
+    },
+    {
+      "path": "clips/38/4.MOV",
+      "source": "fsl105",
+      "expected": 38,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20229199999999992
+    },
+    {
+      "path": "clips/38/9.MOV",
+      "source": "fsl105",
+      "expected": 38,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999815225601196
+      },
+      "classifierMs": 0.20754099999999198
+    },
+    {
+      "path": "clips/38/7.MOV",
+      "source": "fsl105",
+      "expected": 38,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.7083333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.8563637733459473
+      },
+      "classifierMs": 0.22466599999998493
+    },
+    {
+      "path": "clips/39/15.MOV",
+      "source": "fsl105",
+      "expected": 39,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9993764758110046
+      },
+      "classifierMs": 0.196124999999995
+    },
+    {
+      "path": "clips/39/11.MOV",
+      "source": "fsl105",
+      "expected": 39,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": 20,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.18233299999999986
+    },
+    {
+      "path": "clips/39/1.MOV",
+      "source": "fsl105",
+      "expected": 39,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19170900000000302
+    },
+    {
+      "path": "clips/39/14.MOV",
+      "source": "fsl105",
+      "expected": 39,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9772509932518005
+      },
+      "classifierMs": 0.1962919999999997
+    },
+    {
+      "path": "clips/40/4.MOV",
+      "source": "fsl105",
+      "expected": 40,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.5,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.19129200000000424
+    },
+    {
+      "path": "clips/40/12.MOV",
+      "source": "fsl105",
+      "expected": 40,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.219333000000006
+    },
+    {
+      "path": "clips/40/17.MOV",
+      "source": "fsl105",
+      "expected": 40,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.7083333333333334,
+      "rawTop1": 20,
+      "result": {
+        "status": "unknown",
+        "reason": "low-score",
+        "label": null,
+        "score": 0.5314998030662537,
+        "distance": 0.45914152730742136
+      },
+      "classifierMs": 0.2260000000000275
+    },
+    {
+      "path": "clips/40/20.MOV",
+      "source": "fsl105",
+      "expected": 40,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9974262118339539
+      },
+      "classifierMs": 0.22279100000000085
+    },
+    {
+      "path": "clips/40/5.MOV",
+      "source": "fsl105",
+      "expected": 40,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.75,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19754199999999855
+    },
+    {
+      "path": "clips/41/15.MOV",
+      "source": "fsl105",
+      "expected": 41,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.19508400000000847
+    },
+    {
+      "path": "clips/41/16.MOV",
+      "source": "fsl105",
+      "expected": 41,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.19045800000000668
+    },
+    {
+      "path": "clips/41/21.MOV",
+      "source": "fsl105",
+      "expected": 41,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9977431297302246
+      },
+      "classifierMs": 0.21433299999998212
+    },
+    {
+      "path": "clips/41/9.MOV",
+      "source": "fsl105",
+      "expected": 41,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2551249999999925
+    },
+    {
+      "path": "clips/41/6.MOV",
+      "source": "fsl105",
+      "expected": 41,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999998807907104
+      },
+      "classifierMs": 0.19954100000001063
+    },
+    {
+      "path": "clips/42/4.MOV",
+      "source": "fsl105",
+      "expected": 42,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.22141600000000494
+    },
+    {
+      "path": "clips/42/1.MOV",
+      "source": "fsl105",
+      "expected": 42,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999995231628418
+      },
+      "classifierMs": 0.20591699999999946
+    },
+    {
+      "path": "clips/42/14.MOV",
+      "source": "fsl105",
+      "expected": 42,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19345899999999006
+    },
+    {
+      "path": "clips/42/11.MOV",
+      "source": "fsl105",
+      "expected": 42,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999996423721313
+      },
+      "classifierMs": 0.1960420000000056
+    },
+    {
+      "path": "clips/43/17.MOV",
+      "source": "fsl105",
+      "expected": 43,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.9166666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.916242241859436
+      },
+      "classifierMs": 0.19370899999998414
+    },
+    {
+      "path": "clips/43/1.MOV",
+      "source": "fsl105",
+      "expected": 43,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999998807907104
+      },
+      "classifierMs": 0.19241599999998016
+    },
+    {
+      "path": "clips/43/4.MOV",
+      "source": "fsl105",
+      "expected": 43,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19200000000000728
+    },
+    {
+      "path": "clips/43/18.MOV",
+      "source": "fsl105",
+      "expected": 43,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.9166666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.7788383960723877
+      },
+      "classifierMs": 0.19374999999999432
+    },
+    {
+      "path": "clips/44/2.MOV",
+      "source": "fsl105",
+      "expected": 44,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.8126242756843567
+      },
+      "classifierMs": 0.21750000000000114
+    },
+    {
+      "path": "clips/44/13.MOV",
+      "source": "fsl105",
+      "expected": 44,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9937165379524231
+      },
+      "classifierMs": 0.2032079999999894
+    },
+    {
+      "path": "clips/44/18.MOV",
+      "source": "fsl105",
+      "expected": 44,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.9166666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9890062808990479
+      },
+      "classifierMs": 0.20633300000000077
+    },
+    {
+      "path": "clips/44/15.MOV",
+      "source": "fsl105",
+      "expected": 44,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9684627056121826
+      },
+      "classifierMs": 0.22662500000001273
+    },
+    {
+      "path": "clips/45/9.MOV",
+      "source": "fsl105",
+      "expected": 45,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.21875
+    },
+    {
+      "path": "clips/45/10.MOV",
+      "source": "fsl105",
+      "expected": 45,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20641700000001606
+    },
+    {
+      "path": "clips/45/6.MOV",
+      "source": "fsl105",
+      "expected": 45,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19704200000001038
+    },
+    {
+      "path": "clips/45/17.MOV",
+      "source": "fsl105",
+      "expected": 45,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19720799999998917
+    },
+    {
+      "path": "clips/46/16.MOV",
+      "source": "fsl105",
+      "expected": 46,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9997569918632507
+      },
+      "classifierMs": 0.19829200000000924
+    },
+    {
+      "path": "clips/46/5.MOV",
+      "source": "fsl105",
+      "expected": 46,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9979320764541626
+      },
+      "classifierMs": 0.2444590000000062
+    },
+    {
+      "path": "clips/46/10.MOV",
+      "source": "fsl105",
+      "expected": 46,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9993481040000916
+      },
+      "classifierMs": 0.24812500000001592
+    },
+    {
+      "path": "clips/46/13.MOV",
+      "source": "fsl105",
+      "expected": 46,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999918937683105
+      },
+      "classifierMs": 0.2081670000000031
+    },
+    {
+      "path": "clips/47/10.MOV",
+      "source": "fsl105",
+      "expected": 47,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1888749999999959
+    },
+    {
+      "path": "clips/47/5.MOV",
+      "source": "fsl105",
+      "expected": 47,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.19591700000000856
+    },
+    {
+      "path": "clips/47/0.MOV",
+      "source": "fsl105",
+      "expected": 47,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.18554100000000062
+    },
+    {
+      "path": "clips/47/14.MOV",
+      "source": "fsl105",
+      "expected": 47,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.3878750000000082
+    },
+    {
+      "path": "clips/48/14.MOV",
+      "source": "fsl105",
+      "expected": 48,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.2039999999999793
+    },
+    {
+      "path": "clips/48/4.MOV",
+      "source": "fsl105",
+      "expected": 48,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": 24,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.18420799999998394
+    },
+    {
+      "path": "clips/48/0.MOV",
+      "source": "fsl105",
+      "expected": 48,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1806669999999997
+    },
+    {
+      "path": "clips/48/6.MOV",
+      "source": "fsl105",
+      "expected": 48,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.18108399999999847
+    },
+    {
+      "path": "clips/49/16.MOV",
+      "source": "fsl105",
+      "expected": 49,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.18358299999999872
+    },
+    {
+      "path": "clips/49/19.MOV",
+      "source": "fsl105",
+      "expected": 49,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.180499999999995
+    },
+    {
+      "path": "clips/49/18.MOV",
+      "source": "fsl105",
+      "expected": 49,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1875829999999894
+    },
+    {
+      "path": "clips/49/8.MOV",
+      "source": "fsl105",
+      "expected": 49,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.2074169999999924
+    },
+    {
+      "path": "clips/50/19.MOV",
+      "source": "fsl105",
+      "expected": 50,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19354199999997945
+    },
+    {
+      "path": "clips/50/2.MOV",
+      "source": "fsl105",
+      "expected": 50,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.21866600000001313
+    },
+    {
+      "path": "clips/50/5.MOV",
+      "source": "fsl105",
+      "expected": 50,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.21650000000002478
+    },
+    {
+      "path": "clips/50/3.MOV",
+      "source": "fsl105",
+      "expected": 50,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1926249999999925
+    },
+    {
+      "path": "clips/51/15.MOV",
+      "source": "fsl105",
+      "expected": 51,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1945840000000203
+    },
+    {
+      "path": "clips/51/17.MOV",
+      "source": "fsl105",
+      "expected": 51,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999986886978149
+      },
+      "classifierMs": 0.19404099999999858
+    },
+    {
+      "path": "clips/51/18.MOV",
+      "source": "fsl105",
+      "expected": 51,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.999993085861206
+      },
+      "classifierMs": 0.19999999999998863
+    },
+    {
+      "path": "clips/51/5.MOV",
+      "source": "fsl105",
+      "expected": 51,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999790191650391
+      },
+      "classifierMs": 0.21229099999999335
+    },
+    {
+      "path": "clips/52/18.MOV",
+      "source": "fsl105",
+      "expected": 52,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9968936443328857
+      },
+      "classifierMs": 0.19304100000002222
+    },
+    {
+      "path": "clips/52/9.MOV",
+      "source": "fsl105",
+      "expected": 52,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999992847442627
+      },
+      "classifierMs": 0.20062500000000227
+    },
+    {
+      "path": "clips/52/13.MOV",
+      "source": "fsl105",
+      "expected": 52,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999990463256836
+      },
+      "classifierMs": 0.20775000000000432
+    },
+    {
+      "path": "clips/52/17.MOV",
+      "source": "fsl105",
+      "expected": 52,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9996870756149292
+      },
+      "classifierMs": 0.2057500000000232
+    },
+    {
+      "path": "clips/53/8.MOV",
+      "source": "fsl105",
+      "expected": 53,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2013329999999769
+    },
+    {
+      "path": "clips/53/0.MOV",
+      "source": "fsl105",
+      "expected": 53,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9981241822242737
+      },
+      "classifierMs": 0.20599999999998886
+    },
+    {
+      "path": "clips/53/2.MOV",
+      "source": "fsl105",
+      "expected": 53,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.8384524583816528
+      },
+      "classifierMs": 0.19325000000000614
+    },
+    {
+      "path": "clips/53/18.MOV",
+      "source": "fsl105",
+      "expected": 53,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999037981033325
+      },
+      "classifierMs": 0.1929580000000044
+    },
+    {
+      "path": "clips/54/1.MOV",
+      "source": "fsl105",
+      "expected": 54,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.5,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18995899999998755
+    },
+    {
+      "path": "clips/54/2.MOV",
+      "source": "fsl105",
+      "expected": 54,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.375,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.18616700000001174
+    },
+    {
+      "path": "clips/54/0.MOV",
+      "source": "fsl105",
+      "expected": 54,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.18087500000001455
+    },
+    {
+      "path": "clips/54/16.MOV",
+      "source": "fsl105",
+      "expected": 54,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1912499999999966
+    },
+    {
+      "path": "clips/55/11.MOV",
+      "source": "fsl105",
+      "expected": 55,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.6666666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20054200000001288
+    },
+    {
+      "path": "clips/55/7.MOV",
+      "source": "fsl105",
+      "expected": 55,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1954589999999996
+    },
+    {
+      "path": "clips/55/13.MOV",
+      "source": "fsl105",
+      "expected": 55,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20520799999999895
+    },
+    {
+      "path": "clips/55/10.MOV",
+      "source": "fsl105",
+      "expected": 55,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.7083333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.197749999999985
+    },
+    {
+      "path": "clips/56/16.MOV",
+      "source": "fsl105",
+      "expected": 56,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1979159999999922
+    },
+    {
+      "path": "clips/56/6.MOV",
+      "source": "fsl105",
+      "expected": 56,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999991655349731
+      },
+      "classifierMs": 0.19637499999998909
+    },
+    {
+      "path": "clips/56/7.MOV",
+      "source": "fsl105",
+      "expected": 56,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999997615814209
+      },
+      "classifierMs": 0.20283399999999574
+    },
+    {
+      "path": "clips/56/8.MOV",
+      "source": "fsl105",
+      "expected": 56,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999901056289673
+      },
+      "classifierMs": 0.19529099999999744
+    },
+    {
+      "path": "clips/57/16.MOV",
+      "source": "fsl105",
+      "expected": 57,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2112499999999784
+    },
+    {
+      "path": "clips/57/7.MOV",
+      "source": "fsl105",
+      "expected": 57,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999998807907104
+      },
+      "classifierMs": 0.1932079999999985
+    },
+    {
+      "path": "clips/57/3.MOV",
+      "source": "fsl105",
+      "expected": 57,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1939999999999884
+    },
+    {
+      "path": "clips/57/10.MOV",
+      "source": "fsl105",
+      "expected": 57,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20066599999998402
+    },
+    {
+      "path": "clips/58/15.MOV",
+      "source": "fsl105",
+      "expected": 58,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999943971633911
+      },
+      "classifierMs": 0.19687499999997726
+    },
+    {
+      "path": "clips/58/4.MOV",
+      "source": "fsl105",
+      "expected": 58,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999998807907104
+      },
+      "classifierMs": 0.21054200000000378
+    },
+    {
+      "path": "clips/58/10.MOV",
+      "source": "fsl105",
+      "expected": 58,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19412500000001387
+    },
+    {
+      "path": "clips/58/7.MOV",
+      "source": "fsl105",
+      "expected": 58,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.193916999999999
+    },
+    {
+      "path": "clips/59/2.MOV",
+      "source": "fsl105",
+      "expected": 59,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19879199999999742
+    },
+    {
+      "path": "clips/59/11.MOV",
+      "source": "fsl105",
+      "expected": 59,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20170899999999392
+    },
+    {
+      "path": "clips/59/13.MOV",
+      "source": "fsl105",
+      "expected": 59,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20829200000000014
+    },
+    {
+      "path": "clips/59/19.MOV",
+      "source": "fsl105",
+      "expected": 59,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19445799999999736
+    },
+    {
+      "path": "clips/60/12.MOV",
+      "source": "fsl105",
+      "expected": 60,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1948330000000169
+    },
+    {
+      "path": "clips/60/16.MOV",
+      "source": "fsl105",
+      "expected": 60,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19429199999999014
+    },
+    {
+      "path": "clips/60/19.MOV",
+      "source": "fsl105",
+      "expected": 60,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.23400000000000887
+    },
+    {
+      "path": "clips/60/0.MOV",
+      "source": "fsl105",
+      "expected": 60,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9998401403427124
+      },
+      "classifierMs": 0.20041700000001583
+    },
+    {
+      "path": "clips/61/16.MOV",
+      "source": "fsl105",
+      "expected": 61,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999874830245972
+      },
+      "classifierMs": 0.19933399999999324
+    },
+    {
+      "path": "clips/61/9.MOV",
+      "source": "fsl105",
+      "expected": 61,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999998807907104
+      },
+      "classifierMs": 0.4475830000000087
+    },
+    {
+      "path": "clips/61/4.MOV",
+      "source": "fsl105",
+      "expected": 61,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9616140127182007
+      },
+      "classifierMs": 0.2173750000000041
+    },
+    {
+      "path": "clips/61/11.MOV",
+      "source": "fsl105",
+      "expected": 61,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999974966049194
+      },
+      "classifierMs": 0.2655419999999822
+    },
+    {
+      "path": "clips/62/16.MOV",
+      "source": "fsl105",
+      "expected": 62,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.7083333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.278082999999981
+    },
+    {
+      "path": "clips/62/15.MOV",
+      "source": "fsl105",
+      "expected": 62,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20587499999999181
+    },
+    {
+      "path": "clips/62/3.MOV",
+      "source": "fsl105",
+      "expected": 62,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.75,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19625000000002046
+    },
+    {
+      "path": "clips/62/11.MOV",
+      "source": "fsl105",
+      "expected": 62,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.24433299999998326
+    },
+    {
+      "path": "clips/63/8.MOV",
+      "source": "fsl105",
+      "expected": 63,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999682903289795
+      },
+      "classifierMs": 0.25954199999998195
+    },
+    {
+      "path": "clips/63/13.MOV",
+      "source": "fsl105",
+      "expected": 63,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2656669999999792
+    },
+    {
+      "path": "clips/63/18.MOV",
+      "source": "fsl105",
+      "expected": 63,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": 22,
+      "result": {
+        "status": "unknown",
+        "reason": "novel-shape",
+        "label": null,
+        "score": 1,
+        "distance": 0.4485710240424884
+      },
+      "classifierMs": 0.24099999999998545
+    },
+    {
+      "path": "clips/63/4.MOV",
+      "source": "fsl105",
+      "expected": 63,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.9166666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19533400000000256
+    },
+    {
+      "path": "clips/64/10.MOV",
+      "source": "fsl105",
+      "expected": 64,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19274999999998954
+    },
+    {
+      "path": "clips/64/19.MOV",
+      "source": "fsl105",
+      "expected": 64,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19129200000000424
+    },
+    {
+      "path": "clips/64/3.MOV",
+      "source": "fsl105",
+      "expected": 64,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19116699999997877
+    },
+    {
+      "path": "clips/64/8.MOV",
+      "source": "fsl105",
+      "expected": 64,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.21808399999997619
+    },
+    {
+      "path": "clips/65/7.MOV",
+      "source": "fsl105",
+      "expected": 65,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18870799999999122
+    },
+    {
+      "path": "clips/65/18.MOV",
+      "source": "fsl105",
+      "expected": 65,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18966700000001424
+    },
+    {
+      "path": "clips/65/12.MOV",
+      "source": "fsl105",
+      "expected": 65,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19054099999999607
+    },
+    {
+      "path": "clips/65/8.MOV",
+      "source": "fsl105",
+      "expected": 65,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18666699999999992
+    },
+    {
+      "path": "clips/66/5.MOV",
+      "source": "fsl105",
+      "expected": 66,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19020799999998417
+    },
+    {
+      "path": "clips/66/12.MOV",
+      "source": "fsl105",
+      "expected": 66,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20154200000001765
+    },
+    {
+      "path": "clips/66/6.MOV",
+      "source": "fsl105",
+      "expected": 66,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19729099999997857
+    },
+    {
+      "path": "clips/66/11.MOV",
+      "source": "fsl105",
+      "expected": 66,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1859579999999994
+    },
+    {
+      "path": "clips/67/19.MOV",
+      "source": "fsl105",
+      "expected": 67,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18891700000000355
+    },
+    {
+      "path": "clips/67/10.MOV",
+      "source": "fsl105",
+      "expected": 67,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.625,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19012499999999477
+    },
+    {
+      "path": "clips/67/15.MOV",
+      "source": "fsl105",
+      "expected": 67,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.6666666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2124160000000188
+    },
+    {
+      "path": "clips/67/0.MOV",
+      "source": "fsl105",
+      "expected": 67,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19541700000002038
+    },
+    {
+      "path": "clips/68/12.MOV",
+      "source": "fsl105",
+      "expected": 68,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.20408299999999713
+    },
+    {
+      "path": "clips/68/8.MOV",
+      "source": "fsl105",
+      "expected": 68,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19145799999998303
+    },
+    {
+      "path": "clips/68/13.MOV",
+      "source": "fsl105",
+      "expected": 68,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17524999999997704
+    },
+    {
+      "path": "clips/68/4.MOV",
+      "source": "fsl105",
+      "expected": 68,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.6666666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1874159999999847
+    },
+    {
+      "path": "clips/69/18.MOV",
+      "source": "fsl105",
+      "expected": 69,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.8927830457687378
+      },
+      "classifierMs": 0.19350000000000023
+    },
+    {
+      "path": "clips/69/5.MOV",
+      "source": "fsl105",
+      "expected": 69,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.999998927116394
+      },
+      "classifierMs": 0.1893750000000125
+    },
+    {
+      "path": "clips/69/19.MOV",
+      "source": "fsl105",
+      "expected": 69,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9044515490531921
+      },
+      "classifierMs": 0.2120830000000069
+    },
+    {
+      "path": "clips/69/15.MOV",
+      "source": "fsl105",
+      "expected": 69,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.5913205742835999
+      },
+      "classifierMs": 0.190291000000002
+    },
+    {
+      "path": "clips/70/3.MOV",
+      "source": "fsl105",
+      "expected": 70,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18899999999999295
+    },
+    {
+      "path": "clips/70/17.MOV",
+      "source": "fsl105",
+      "expected": 70,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999263286590576
+      },
+      "classifierMs": 0.1877499999999941
+    },
+    {
+      "path": "clips/70/8.MOV",
+      "source": "fsl105",
+      "expected": 70,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999994039535522
+      },
+      "classifierMs": 0.18883399999998574
+    },
+    {
+      "path": "clips/70/13.MOV",
+      "source": "fsl105",
+      "expected": 70,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999911785125732
+      },
+      "classifierMs": 0.18845799999999713
+    },
+    {
+      "path": "clips/71/14.MOV",
+      "source": "fsl105",
+      "expected": 71,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18850000000000477
+    },
+    {
+      "path": "clips/71/1.MOV",
+      "source": "fsl105",
+      "expected": 71,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1862080000000219
+    },
+    {
+      "path": "clips/71/5.MOV",
+      "source": "fsl105",
+      "expected": 71,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.6666666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9998993873596191
+      },
+      "classifierMs": 0.2069580000000144
+    },
+    {
+      "path": "clips/71/19.MOV",
+      "source": "fsl105",
+      "expected": 71,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.4166666666666667,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1812919999999849
+    },
+    {
+      "path": "clips/72/8.MOV",
+      "source": "fsl105",
+      "expected": 72,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999849796295166
+      },
+      "classifierMs": 0.19704199999998195
+    },
+    {
+      "path": "clips/72/2.MOV",
+      "source": "fsl105",
+      "expected": 72,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9998587369918823
+      },
+      "classifierMs": 0.18649999999999523
+    },
+    {
+      "path": "clips/72/1.MOV",
+      "source": "fsl105",
+      "expected": 72,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.999991774559021
+      },
+      "classifierMs": 0.18779100000000426
+    },
+    {
+      "path": "clips/72/12.MOV",
+      "source": "fsl105",
+      "expected": 72,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.999996542930603
+      },
+      "classifierMs": 0.18866599999998357
+    },
+    {
+      "path": "clips/73/17.MOV",
+      "source": "fsl105",
+      "expected": 73,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1879160000000013
+    },
+    {
+      "path": "clips/73/6.MOV",
+      "source": "fsl105",
+      "expected": 73,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.21579099999999585
+    },
+    {
+      "path": "clips/73/8.MOV",
+      "source": "fsl105",
+      "expected": 73,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2399159999999938
+    },
+    {
+      "path": "clips/73/15.MOV",
+      "source": "fsl105",
+      "expected": 73,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.24320900000000734
+    },
+    {
+      "path": "clips/74/19.MOV",
+      "source": "fsl105",
+      "expected": 74,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999991655349731
+      },
+      "classifierMs": 0.19945800000002123
+    },
+    {
+      "path": "clips/74/10.MOV",
+      "source": "fsl105",
+      "expected": 74,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9888956546783447
+      },
+      "classifierMs": 0.20329100000000722
+    },
+    {
+      "path": "clips/74/3.MOV",
+      "source": "fsl105",
+      "expected": 74,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.999990701675415
+      },
+      "classifierMs": 0.19841700000000628
+    },
+    {
+      "path": "clips/74/15.MOV",
+      "source": "fsl105",
+      "expected": 74,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999959468841553
+      },
+      "classifierMs": 0.6325840000000085
+    },
+    {
+      "path": "clips/75/13.MOV",
+      "source": "fsl105",
+      "expected": 75,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.181083000000001
+    },
+    {
+      "path": "clips/75/16.MOV",
+      "source": "fsl105",
+      "expected": 75,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.5,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19158400000000597
+    },
+    {
+      "path": "clips/75/18.MOV",
+      "source": "fsl105",
+      "expected": 75,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.18629200000000878
+    },
+    {
+      "path": "clips/75/9.MOV",
+      "source": "fsl105",
+      "expected": 75,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.4166666666666667,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.19037500000001728
+    },
+    {
+      "path": "clips/76/16.MOV",
+      "source": "fsl105",
+      "expected": 76,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9766839742660522
+      },
+      "classifierMs": 0.19070899999999824
+    },
+    {
+      "path": "clips/76/15.MOV",
+      "source": "fsl105",
+      "expected": 76,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9997243285179138
+      },
+      "classifierMs": 0.18866699999998104
+    },
+    {
+      "path": "clips/76/10.MOV",
+      "source": "fsl105",
+      "expected": 76,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18958299999999895
+    },
+    {
+      "path": "clips/76/18.MOV",
+      "source": "fsl105",
+      "expected": 76,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.8487598896026611
+      },
+      "classifierMs": 0.18804099999999835
+    },
+    {
+      "path": "clips/77/4.MOV",
+      "source": "fsl105",
+      "expected": 77,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999986886978149
+      },
+      "classifierMs": 0.18962499999997817
+    },
+    {
+      "path": "clips/77/6.MOV",
+      "source": "fsl105",
+      "expected": 77,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1868340000000046
+    },
+    {
+      "path": "clips/77/19.MOV",
+      "source": "fsl105",
+      "expected": 77,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19016700000000242
+    },
+    {
+      "path": "clips/77/12.MOV",
+      "source": "fsl105",
+      "expected": 77,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18837500000000773
+    },
+    {
+      "path": "clips/78/9.MOV",
+      "source": "fsl105",
+      "expected": 78,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.188541999999984
+    },
+    {
+      "path": "clips/78/13.MOV",
+      "source": "fsl105",
+      "expected": 78,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1877499999999941
+    },
+    {
+      "path": "clips/78/3.MOV",
+      "source": "fsl105",
+      "expected": 78,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1881659999999954
+    },
+    {
+      "path": "clips/78/8.MOV",
+      "source": "fsl105",
+      "expected": 78,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20558299999999008
+    },
+    {
+      "path": "clips/79/5.MOV",
+      "source": "fsl105",
+      "expected": 79,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19829200000000924
+    },
+    {
+      "path": "clips/79/0.MOV",
+      "source": "fsl105",
+      "expected": 79,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1909170000000131
+    },
+    {
+      "path": "clips/79/1.MOV",
+      "source": "fsl105",
+      "expected": 79,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.75,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18779200000000174
+    },
+    {
+      "path": "clips/79/12.MOV",
+      "source": "fsl105",
+      "expected": 79,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20224999999999227
+    },
+    {
+      "path": "clips/80/19.MOV",
+      "source": "fsl105",
+      "expected": 80,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18700000000001182
+    },
+    {
+      "path": "clips/80/1.MOV",
+      "source": "fsl105",
+      "expected": 80,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.6666666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.19208299999999667
+    },
+    {
+      "path": "clips/80/15.MOV",
+      "source": "fsl105",
+      "expected": 80,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1929580000000044
+    },
+    {
+      "path": "clips/80/3.MOV",
+      "source": "fsl105",
+      "expected": 80,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.7916666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1846659999999929
+    },
+    {
+      "path": "clips/81/0.MOV",
+      "source": "fsl105",
+      "expected": 81,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9840844869613647
+      },
+      "classifierMs": 0.18254100000001472
+    },
+    {
+      "path": "clips/81/10.MOV",
+      "source": "fsl105",
+      "expected": 81,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": 21,
+      "result": {
+        "status": "unknown",
+        "reason": "low-score",
+        "label": null,
+        "score": 0.5225582122802734,
+        "distance": 0.22287791666637624
+      },
+      "classifierMs": 0.18812500000001364
+    },
+    {
+      "path": "clips/81/11.MOV",
+      "source": "fsl105",
+      "expected": 81,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9438149333000183
+      },
+      "classifierMs": 0.18154200000000742
+    },
+    {
+      "path": "clips/81/5.MOV",
+      "source": "fsl105",
+      "expected": 81,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999977350234985
+      },
+      "classifierMs": 0.18316699999999742
+    },
+    {
+      "path": "clips/82/5.MOV",
+      "source": "fsl105",
+      "expected": 82,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17774999999997476
+    },
+    {
+      "path": "clips/82/15.MOV",
+      "source": "fsl105",
+      "expected": 82,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": 24,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.18491699999998445
+    },
+    {
+      "path": "clips/82/16.MOV",
+      "source": "fsl105",
+      "expected": 82,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.5,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.20104100000000358
+    },
+    {
+      "path": "clips/82/3.MOV",
+      "source": "fsl105",
+      "expected": 82,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1945829999999944
+    },
+    {
+      "path": "clips/83/13.MOV",
+      "source": "fsl105",
+      "expected": 83,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.5,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17683300000001623
+    },
+    {
+      "path": "clips/83/9.MOV",
+      "source": "fsl105",
+      "expected": 83,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.6666666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.179458000000011
+    },
+    {
+      "path": "clips/83/3.MOV",
+      "source": "fsl105",
+      "expected": 83,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17650000000000432
+    },
+    {
+      "path": "clips/83/4.MOV",
+      "source": "fsl105",
+      "expected": 83,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1927090000000078
+    },
+    {
+      "path": "clips/84/12.MOV",
+      "source": "fsl105",
+      "expected": 84,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1753750000000025
+    },
+    {
+      "path": "clips/84/15.MOV",
+      "source": "fsl105",
+      "expected": 84,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18191699999999855
+    },
+    {
+      "path": "clips/84/6.MOV",
+      "source": "fsl105",
+      "expected": 84,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1751250000000084
+    },
+    {
+      "path": "clips/84/18.MOV",
+      "source": "fsl105",
+      "expected": 84,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17895899999999187
+    },
+    {
+      "path": "clips/85/1.MOV",
+      "source": "fsl105",
+      "expected": 85,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.625,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999918937683105
+      },
+      "classifierMs": 0.18550000000001887
+    },
+    {
+      "path": "clips/85/14.MOV",
+      "source": "fsl105",
+      "expected": 85,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17633299999999963
+    },
+    {
+      "path": "clips/85/0.MOV",
+      "source": "fsl105",
+      "expected": 85,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.5416666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999762773513794
+      },
+      "classifierMs": 0.18149999999999977
+    },
+    {
+      "path": "clips/85/13.MOV",
+      "source": "fsl105",
+      "expected": 85,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17495800000000372
+    },
+    {
+      "path": "clips/86/3.MOV",
+      "source": "fsl105",
+      "expected": 86,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17975000000001273
+    },
+    {
+      "path": "clips/86/17.MOV",
+      "source": "fsl105",
+      "expected": 86,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17533299999999485
+    },
+    {
+      "path": "clips/86/7.MOV",
+      "source": "fsl105",
+      "expected": 86,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1740000000000066
+    },
+    {
+      "path": "clips/86/8.MOV",
+      "source": "fsl105",
+      "expected": 86,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.4166666666666667,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17650000000000432
+    },
+    {
+      "path": "clips/87/13.MOV",
+      "source": "fsl105",
+      "expected": 87,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17604199999999537
+    },
+    {
+      "path": "clips/87/1.MOV",
+      "source": "fsl105",
+      "expected": 87,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.7916666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18004200000001447
+    },
+    {
+      "path": "clips/87/14.MOV",
+      "source": "fsl105",
+      "expected": 87,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.5833333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18045899999998483
+    },
+    {
+      "path": "clips/87/10.MOV",
+      "source": "fsl105",
+      "expected": 87,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.7916666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20195799999999053
+    },
+    {
+      "path": "clips/88/3.MOV",
+      "source": "fsl105",
+      "expected": 88,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17575000000002206
+    },
+    {
+      "path": "clips/88/7.MOV",
+      "source": "fsl105",
+      "expected": 88,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.24012500000000614
+    },
+    {
+      "path": "clips/88/12.MOV",
+      "source": "fsl105",
+      "expected": 88,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20554200000000833
+    },
+    {
+      "path": "clips/88/11.MOV",
+      "source": "fsl105",
+      "expected": 88,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.48920899999998824
+    },
+    {
+      "path": "clips/89/5.MOV",
+      "source": "fsl105",
+      "expected": 89,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999998807907104
+      },
+      "classifierMs": 0.19974999999999454
+    },
+    {
+      "path": "clips/89/2.MOV",
+      "source": "fsl105",
+      "expected": 89,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999997615814209
+      },
+      "classifierMs": 0.18299999999999272
+    },
+    {
+      "path": "clips/89/19.MOV",
+      "source": "fsl105",
+      "expected": 89,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18166700000000446
+    },
+    {
+      "path": "clips/89/4.MOV",
+      "source": "fsl105",
+      "expected": 89,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18062500000002046
+    },
+    {
+      "path": "clips/90/6.MOV",
+      "source": "fsl105",
+      "expected": 90,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.5833333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.19037500000001728
+    },
+    {
+      "path": "clips/90/2.MOV",
+      "source": "fsl105",
+      "expected": 90,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9992815852165222
+      },
+      "classifierMs": 0.1832080000000076
+    },
+    {
+      "path": "clips/90/8.MOV",
+      "source": "fsl105",
+      "expected": 90,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20262500000001182
+    },
+    {
+      "path": "clips/90/4.MOV",
+      "source": "fsl105",
+      "expected": 90,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.999728262424469
+      },
+      "classifierMs": 0.1823750000000075
+    },
+    {
+      "path": "clips/91/9.MOV",
+      "source": "fsl105",
+      "expected": 91,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17379199999999173
+    },
+    {
+      "path": "clips/91/5.MOV",
+      "source": "fsl105",
+      "expected": 91,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.6666666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17650000000000432
+    },
+    {
+      "path": "clips/91/16.MOV",
+      "source": "fsl105",
+      "expected": 91,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.625,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1805840000000103
+    },
+    {
+      "path": "clips/91/2.MOV",
+      "source": "fsl105",
+      "expected": 91,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.18362500000000637
+    },
+    {
+      "path": "clips/92/15.MOV",
+      "source": "fsl105",
+      "expected": 92,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1847919999999874
+    },
+    {
+      "path": "clips/92/12.MOV",
+      "source": "fsl105",
+      "expected": 92,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.75,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9993151426315308
+      },
+      "classifierMs": 0.18183299999998326
+    },
+    {
+      "path": "clips/92/4.MOV",
+      "source": "fsl105",
+      "expected": 92,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.6666666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17654099999998607
+    },
+    {
+      "path": "clips/92/16.MOV",
+      "source": "fsl105",
+      "expected": 92,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18012499999997544
+    },
+    {
+      "path": "clips/93/8.MOV",
+      "source": "fsl105",
+      "expected": 93,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1754579999999919
+    },
+    {
+      "path": "clips/93/1.MOV",
+      "source": "fsl105",
+      "expected": 93,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17379099999999426
+    },
+    {
+      "path": "clips/93/4.MOV",
+      "source": "fsl105",
+      "expected": 93,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17795799999998962
+    },
+    {
+      "path": "clips/93/3.MOV",
+      "source": "fsl105",
+      "expected": 93,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17516600000001858
+    },
+    {
+      "path": "clips/94/9.MOV",
+      "source": "fsl105",
+      "expected": 94,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17462500000002024
+    },
+    {
+      "path": "clips/94/17.MOV",
+      "source": "fsl105",
+      "expected": 94,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1769999999999925
+    },
+    {
+      "path": "clips/94/5.MOV",
+      "source": "fsl105",
+      "expected": 94,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17808399999998414
+    },
+    {
+      "path": "clips/94/12.MOV",
+      "source": "fsl105",
+      "expected": 94,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17395800000002737
+    },
+    {
+      "path": "clips/95/10.MOV",
+      "source": "fsl105",
+      "expected": 95,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.8333333333333334,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9998124241828918
+      },
+      "classifierMs": 0.1825409999999863
+    },
+    {
+      "path": "clips/95/1.MOV",
+      "source": "fsl105",
+      "expected": 95,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9987776875495911
+      },
+      "classifierMs": 0.18233399999999733
+    },
+    {
+      "path": "clips/95/12.MOV",
+      "source": "fsl105",
+      "expected": 95,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9926971793174744
+      },
+      "classifierMs": 0.1790420000000097
+    },
+    {
+      "path": "clips/95/17.MOV",
+      "source": "fsl105",
+      "expected": 95,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999997615814209
+      },
+      "classifierMs": 0.182707999999991
+    },
+    {
+      "path": "clips/96/13.MOV",
+      "source": "fsl105",
+      "expected": 96,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.19333299999999554
+    },
+    {
+      "path": "clips/96/19.MOV",
+      "source": "fsl105",
+      "expected": 96,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17508399999999824
+    },
+    {
+      "path": "clips/96/8.MOV",
+      "source": "fsl105",
+      "expected": 96,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17458299999998417
+    },
+    {
+      "path": "clips/96/15.MOV",
+      "source": "fsl105",
+      "expected": 96,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17495800000000372
+    },
+    {
+      "path": "clips/97/20.MOV",
+      "source": "fsl105",
+      "expected": 97,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1750419999999906
+    },
+    {
+      "path": "clips/97/5.MOV",
+      "source": "fsl105",
+      "expected": 97,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17183399999998983
+    },
+    {
+      "path": "clips/97/17.MOV",
+      "source": "fsl105",
+      "expected": 97,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.18449999999998568
+    },
+    {
+      "path": "clips/97/12.MOV",
+      "source": "fsl105",
+      "expected": 97,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.175625000000025
+    },
+    {
+      "path": "clips/98/13.MOV",
+      "source": "fsl105",
+      "expected": 98,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18316599999999994
+    },
+    {
+      "path": "clips/98/3.MOV",
+      "source": "fsl105",
+      "expected": 98,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.20904100000001336
+    },
+    {
+      "path": "clips/98/4.MOV",
+      "source": "fsl105",
+      "expected": 98,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18120799999999804
+    },
+    {
+      "path": "clips/98/19.MOV",
+      "source": "fsl105",
+      "expected": 98,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.17958400000000552
+    },
+    {
+      "path": "clips/99/9.MOV",
+      "source": "fsl105",
+      "expected": 99,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.1761669999999924
+    },
+    {
+      "path": "clips/99/7.MOV",
+      "source": "fsl105",
+      "expected": 99,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17287500000000477
+    },
+    {
+      "path": "clips/99/18.MOV",
+      "source": "fsl105",
+      "expected": 99,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17449999999999477
+    },
+    {
+      "path": "clips/99/16.MOV",
+      "source": "fsl105",
+      "expected": 99,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17754199999998832
+    },
+    {
+      "path": "clips/100/11.MOV",
+      "source": "fsl105",
+      "expected": 100,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.203125
+    },
+    {
+      "path": "clips/100/5.MOV",
+      "source": "fsl105",
+      "expected": 100,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.625,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18433299999998098
+    },
+    {
+      "path": "clips/100/13.MOV",
+      "source": "fsl105",
+      "expected": 100,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0,
+      "rawTop1": 23,
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.18445800000000645
+    },
+    {
+      "path": "clips/100/10.MOV",
+      "source": "fsl105",
+      "expected": 100,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "insufficient-tracking",
+        "label": null
+      },
+      "classifierMs": 0.17599999999998772
+    },
+    {
+      "path": "clips/101/15.MOV",
+      "source": "fsl105",
+      "expected": 101,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18095800000000395
+    },
+    {
+      "path": "clips/101/5.MOV",
+      "source": "fsl105",
+      "expected": 101,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1890420000000006
+    },
+    {
+      "path": "clips/101/6.MOV",
+      "source": "fsl105",
+      "expected": 101,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.21637499999999932
+    },
+    {
+      "path": "clips/101/16.MOV",
+      "source": "fsl105",
+      "expected": 101,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.2023749999999893
+    },
+    {
+      "path": "clips/102/1.MOV",
+      "source": "fsl105",
+      "expected": 102,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.18062500000002046
+    },
+    {
+      "path": "clips/102/2.MOV",
+      "source": "fsl105",
+      "expected": 102,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.1787920000000156
+    },
+    {
+      "path": "clips/102/15.MOV",
+      "source": "fsl105",
+      "expected": 102,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 1
+      },
+      "classifierMs": 0.247792000000004
+    },
+    {
+      "path": "clips/102/7.MOV",
+      "source": "fsl105",
+      "expected": 102,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.875,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9999086856842041
+      },
+      "classifierMs": 0.20695899999998346
+    },
+    {
+      "path": "clips/103/17.MOV",
+      "source": "fsl105",
+      "expected": 103,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.633991539478302
+      },
+      "classifierMs": 0.3692920000000015
+    },
+    {
+      "path": "clips/103/8.MOV",
+      "source": "fsl105",
+      "expected": 103,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": 24,
+      "result": {
+        "status": "unknown",
+        "reason": "novel-shape",
+        "label": null,
+        "score": 0.8399286270141602,
+        "distance": 0.36052488998751564
+      },
+      "classifierMs": 0.19658300000000395
+    },
+    {
+      "path": "clips/103/4.MOV",
+      "source": "fsl105",
+      "expected": 103,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.5062003135681152
+      },
+      "classifierMs": 0.18183300000001168
+    },
+    {
+      "path": "clips/103/9.MOV",
+      "source": "fsl105",
+      "expected": 103,
+      "supported": false,
+      "negativeGroup": "unseen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.8667160272598267
+      },
+      "classifierMs": 0.18062500000002046
+    },
+    {
+      "path": "clips/104/3.MOV",
+      "source": "fsl105",
+      "expected": 104,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9997833371162415
+      },
+      "classifierMs": 0.19812500000000455
+    },
+    {
+      "path": "clips/104/0.MOV",
+      "source": "fsl105",
+      "expected": 104,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 0.9166666666666666,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9993708729743958
+      },
+      "classifierMs": 0.18120799999999804
+    },
+    {
+      "path": "clips/104/8.MOV",
+      "source": "fsl105",
+      "expected": 104,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9972725510597229
+      },
+      "classifierMs": 0.18004099999998857
+    },
+    {
+      "path": "clips/104/1.MOV",
+      "source": "fsl105",
+      "expected": 104,
+      "supported": false,
+      "negativeGroup": "seen-class",
+      "coverage": 1,
+      "rawTop1": "other",
+      "result": {
+        "status": "unknown",
+        "reason": "other",
+        "label": null,
+        "score": 0.9998571872711182
+      },
+      "classifierMs": 0.18062499999999204
+    }
+  ],
+  "limitations": "Research dataset test plus any held-out webcam session; not signer-independent accuracy, assessment of correctness, or end-to-end latency. No thresholds adjusted after this run."
+}

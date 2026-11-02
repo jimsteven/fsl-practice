@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Stage 1 has NO cloud collection. Deny even signed-in owners until
+    // identity, retention, fields, and trusted teacher assignments are approved.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

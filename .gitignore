@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.tools/
+.env
+.env.local
+public/tracking/
+playwright-report/
+test-results/
+storybook-static/
+__pycache__/
+.DS_Store
+.amp/in/

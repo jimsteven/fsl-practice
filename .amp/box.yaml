@@ -1,0 +1,8 @@
+# Shared web version on an Amp Box. Build runs in the deploying orb; the Box
+# only runs the dependency-free Node server over the built dist/.
+build: npm ci --ignore-scripts && npm run setup:tracking && npm run build
+artifacts:
+  - dist
+services:
+  web:
+    command: node scripts/serve-local.mjs

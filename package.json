@@ -1,0 +1,42 @@
+{
+  "name": "fsl-personal-practice",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173 --strictPort",
+    "build": "vite build",
+    "preview": "node scripts/serve-local.mjs",
+    "start:local": "node scripts/local-service.mjs start",
+    "stop:local": "node scripts/local-service.mjs stop",
+    "setup:content": "python3 scripts/setup-content.py",
+    "extract:dataset": "node training/extract.mjs",
+    "train:experimental": "node training/train.mjs",
+    "evaluate:experimental": "node training/evaluate.mjs",
+    "setup:tracking": "node scripts/setup-tracking.mjs",
+    "lint": "eslint .",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "playwright test",
+    "storybook": "storybook dev -p 6006 --host 127.0.0.1 --no-open",
+    "build-storybook": "storybook build",
+    "report:webcam": "node training/webcam-report.mjs"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "1.2.0",
+    "@tensorflow/tfjs": "4.22.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "@storybook/react-vite": "10.6.5",
+    "@vitejs/plugin-react": "6.1.2",
+    "eslint": "10.13.0",
+    "storybook": "10.6.5",
+    "vite": "8.3.5"
+  }
+}

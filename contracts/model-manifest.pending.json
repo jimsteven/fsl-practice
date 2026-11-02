@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "blocked-no-approved-model",
+  "language": "FSL",
+  "lexiconVersion": "planning-1",
+  "signIds": [],
+  "modelVersion": null,
+  "modelUrl": null,
+  "artifactSha256": null,
+  "provenance": { "datasetVersion": null, "rightsReference": null, "consentReference": null, "expertReviewReference": null, "evaluationReference": null },
+  "taskType": null,
+  "inputShape": null,
+  "outputShape": null,
+  "preprocessing": { "version": null, "coordinateSystem": null, "normalization": null, "handOrder": null, "missingHandPolicy": null, "mirrorPolicy": null },
+  "temporal": { "captureBoundaries": null, "sequenceLength": null, "timestampUnits": null, "resampling": null, "padding": null, "missingFramePolicy": null },
+  "confidencePolicy": { "scoreDefinition": null, "calibrationDatasetVersion": null, "perClassThresholds": null, "unknownSignPolicy": null },
+  "feedbackRubric": { "version": null, "expertReviewReference": null, "validationReference": null }
+}

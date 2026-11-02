@@ -1,0 +1,6 @@
+{
+  "url": "https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task",
+  "package": "@mediapipe/tasks-vision@1.2.0",
+  "sha256": "fbc2a30080c3c557093b5ddfc334698132eb341044ccee322ccf8bcf3607cde1",
+  "purpose": "Generic hand landmarks, NOT FSL recognition"
+}
