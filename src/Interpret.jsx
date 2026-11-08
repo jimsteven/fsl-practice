@@ -37,7 +37,6 @@ function useVocabModel() {
 function Sentence({ interpretation, signs }) {
   if (!interpretation) return null;
   if (interpretation.loading) return <p className="interpret-sentence muted">Interpreting with the local LLM…</p>;
-  if (interpretation.error) return <p className="interpret-sentence error">{interpretation.error}</p>;
   return <p className="interpret-sentence">{markAddedWords(interpretation.sentence, signs.map(s => s.gloss)).map((part, i) => part.added ? <u key={i} title="Added by the LLM">{part.text}</u> : <span key={i}>{part.text}</span>)}</p>;
 }
 
@@ -219,7 +218,7 @@ export default function Interpret({ mirror, overlay }) {
         {!camera.active && <div className="camera-empty"><h3>{camera.starting ? 'Preparing hand and face tracking…' : 'Camera unavailable.'}</h3><p>{camera.state.message}</p>{camera.state.phase === 'error' && <button className="primary" onClick={camera.startCamera}>Retry camera</button>}</div>}
         {camera.active && mode === 'interpret' && <>
           <div className="gloss-chain" aria-label="Recognized signs">{signs.map(s => <span key={s.id} className="gloss-pill"><span className="emotion-dot" style={{ background: EMOTION_COLORS[s.emotion] }} title={s.emotion} />{s.gloss}</span>)}</div>
-          <Sentence interpretation={interpretation} signs={signs} />
+          {!interpretation?.error && <Sentence interpretation={interpretation} signs={signs} />}
           <div className={`sign-hud ${hud.status}`}><strong>{hud.status === 'rest' ? '—' : hud.gloss === 'other' ? '…' : hud.gloss || '…'}</strong><span>{hudText}</span>{hud.score !== undefined && <span className="hud-bar"><span style={{ width: `${Math.round(hud.score * 100)}%` }} /></span>}</div>
           <ul className="emotion-panel" aria-label="Facial expression estimate">{EMOTIONS.map(e => <li key={e} className={topEmotion(emotion) === e ? 'current' : ''}><span className="emotion-dot" style={{ background: EMOTION_COLORS[e] }} />{e}<span className="emotion-bar"><span style={{ width: `${Math.round(emotion[e] * 100)}%` }} /></span></li>)}</ul>
         </>}
@@ -238,6 +237,7 @@ export default function Interpret({ mirror, overlay }) {
       </div>
       {mode === 'interpret' && <ol className="pipeline" aria-label="Pipeline">{['Hand tracking', 'Emotion detection', 'LLM interpretation'].map((label, i) => <li key={label} className={stage === i ? 'active' : ''}>{label}</li>)}</ol>}
     </section>
+    {mode === 'interpret' && interpretation?.error && <p className="camera-status error" role="alert">{interpretation.error}</p>}
     {mode === 'interpret' && <>
       <div className="camera-toolbar">
         <div className="toolbar-actions">

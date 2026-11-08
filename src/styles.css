@@ -287,7 +287,6 @@
   .interpret-sentence { position: absolute; top: 3.4rem; left: var(--space-3); right: 11rem; margin: 0; color: var(--camera-text); font-family: var(--serif); font-size: clamp(1.1rem, 2.4vw, 1.8rem); line-height: 1.25; text-shadow: 0 1px 8px rgb(0 0 0 / .7); }
   .interpret-sentence u { text-decoration-thickness: 2px; text-underline-offset: 4px; }
   .interpret-sentence.muted { color: var(--camera-muted); font-size: 1rem; }
-  .interpret-sentence.error { color: var(--camera-text); font-size: .9rem; font-family: inherit; background: var(--danger); padding: var(--space-2) var(--space-3); text-shadow: none; }
   .sign-hud { position: absolute; bottom: var(--space-4); left: 50%; transform: translateX(-50%); min-width: 12rem; text-align: center; background: var(--overlay); color: var(--camera-text); border: 1px solid rgb(255 255 255 / .18); border-radius: var(--radius); padding: var(--space-2) var(--space-4); display: flex; flex-direction: column; gap: var(--space-1); }
   .sign-hud strong { font-size: 1.15rem; letter-spacing: .03em; }
   .sign-hud span { font-size: .72rem; color: var(--camera-muted); }

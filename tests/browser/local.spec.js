@@ -250,6 +250,26 @@ test('interpreter locks in signs between rests, reads the face, and underlines L
   await expect(page.locator('.interpret-sentence')).toHaveCount(0);
 });
 
+test('LLM-free installation keeps the recognition preview unobscured and explains how to enable sentences', async ({ page }) => {
+  await page.route('**/health.json', route => route.fulfill({ contentType: 'application/json', body: JSON.stringify({ webcamSaving: true, interpret: null }) }));
+  await page.addInitScript(loopingClip, '/references/fsl105-3.mp4');
+  for (const width of [1440, 390]) {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto('/#interpret');
+    await expect(page.getByRole('status').filter({ hasText: 'Experimental model ready' })).toBeVisible({ timeout: 30000 });
+    await page.getByLabel('Interpret after a 2-second rest').uncheck();
+    await expect(page.locator('.gloss-pill').first()).toBeVisible({ timeout: 20000 });
+    await page.getByRole('button', { name: /Interpret now/ }).click();
+    const alert = page.getByRole('alert');
+    await expect(alert).toContainText('without --skip-llm');
+    const camera = await page.getByRole('region', { name: 'Interpreter camera' }).boundingBox();
+    expect((await alert.boundingBox()).y).toBeGreaterThanOrEqual(camera.y + camera.height);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    await page.locator('h1').click();
+    await page.screenshot({ path: `test-results/llm-free-${width}.png`, fullPage: true });
+  }
+});
+
 test('a slower earlier interpretation never replaces a newer one', async ({ page }) => {
   const replies = [];
   let secondArrived, secondDone;
