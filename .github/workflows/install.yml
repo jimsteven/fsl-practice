@@ -1,0 +1,62 @@
+name: Cross-platform installation
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            node: .tools/node-runtime/bin/node
+          - os: macos-latest
+            node: .tools/node-runtime/bin/node
+          - os: windows-latest
+            node: .tools/node-runtime/node.exe
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    env:
+      # A small real model exercises download/inference without a 12B CI workload.
+      FSL_LLM_MODEL: gemma3:270m
+      FSL_PORT: 5188
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install and start (macOS/Linux)
+        if: runner.os != 'Windows'
+        run: sh install.sh --no-open
+      - name: Install and start (Windows)
+        if: runner.os == 'Windows'
+        shell: powershell
+        run: '& .\install.ps1 --no-open'
+      - name: Lint and unit tests
+        shell: bash
+        run: |
+          "${{ matrix.node }}" node_modules/eslint/bin/eslint.js .
+          "${{ matrix.node }}" --test tests/*.test.mjs
+      - name: Verify real local interpretation and repeat launch
+        shell: bash
+        run: |
+          "${{ matrix.node }}" scripts/install.mjs --start --no-open
+          "${{ matrix.node }}" --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          const url = 'http://127.0.0.1:5188';
+          const health = await (await fetch(url + '/health.json')).json();
+          assert.equal(health.scope, 'personal-loopback-only');
+          assert.equal(health.interpret, 'gemma3:270m');
+          const response = await fetch(url + '/api/interpret', {
+            method: 'POST', headers: { Origin: url, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ signs: [{ gloss: 'HELLO', emotion: 'Happy' }] }),
+            signal: AbortSignal.timeout(150000)
+          });
+          assert.equal(response.status, 200, await response.clone().text());
+          assert.ok((await response.json()).sentence.length > 0);
+          console.log('Real model inference passed.');
+          JS
+      - name: Installation logs
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: install-logs-${{ matrix.os }}
+          path: .tools/*.log
+          include-hidden-files: true

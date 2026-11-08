@@ -212,3 +212,113 @@ test('recognition follows focus without restarting the camera or carrying an old
   await expect(page.locator('.recognition-status')).toContainText('Experimental model ready', { timeout: 30000 });
   expect(await page.evaluate(() => document.querySelector('.media-plane video').srcObject === window.initialCameraStream && window.initialCameraStream.getTracks().every(t => t.readyState === 'live'))).toBe(true);
 });
+
+function loopingClip(src) {
+  navigator.mediaDevices.getUserMedia = async () => {
+    const source = document.createElement('video');
+    source.src = src; source.muted = true; source.loop = true; source.playsInline = true;
+    await source.play();
+    return source.captureStream();
+  };
+}
+
+test('interpreter locks in signs between rests, reads the face, and underlines LLM-added words', async ({ page }) => {
+  const asked = [];
+  await page.route('**/api/interpret', async route => {
+    asked.push(route.request().postDataJSON());
+    await route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ sentence: 'Hello there!', model: 'test', ms: 5 }) });
+  });
+  // A licensed FSL-105 HELLO reference loops at the camera boundary: each loop is
+  // hands up then hands out of view, i.e. one sign followed by a rest.
+  await page.addInitScript(loopingClip, '/references/fsl105-3.mp4');
+  await page.goto('/#interpret');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Sign it. Read it back.');
+  await expect(page.locator('.camera-status')).toContainText('Experimental model ready', { timeout: 30000 });
+  await page.getByLabel('Interpret after a 2-second rest').uncheck();
+  await expect(page.locator('.gloss-pill').first()).toBeVisible({ timeout: 20000 });
+  const glosses = await page.locator('.gloss-pill').allTextContents();
+  await page.getByRole('button', { name: /Interpret now/ }).click();
+  await expect(page.locator('.interpret-sentence')).toHaveText('Hello there!');
+  expect(asked).toHaveLength(1);
+  expect(asked[0].signs.map(s => s.gloss)).toEqual(glosses);
+  expect(asked[0].signs.every(s => ['Happy', 'Sad', 'Neutral', 'Angry', 'Questioning', 'Skeptical'].includes(s.emotion))).toBe(true);
+  if (glosses.includes('HELLO')) await expect(page.locator('.interpret-sentence u')).toHaveText('there!');
+  await expect(page.locator('.emotion-panel li.current')).toHaveCount(1);
+  await page.screenshot({ path: 'test-results/interpret.png', fullPage: true });
+  await page.getByRole('button', { name: 'Undo last sign' }).click();
+  await page.getByRole('button', { name: 'Clear' }).click();
+  await expect(page.locator('.interpret-sentence')).toHaveCount(0);
+});
+
+test('a slower earlier interpretation never replaces a newer one', async ({ page }) => {
+  const replies = [];
+  let secondArrived, secondDone;
+  const second = new Promise(resolve => { secondArrived = resolve; });
+  const answered = new Promise(resolve => { secondDone = resolve; });
+  await page.route('**/api/interpret', async route => {
+    const count = route.request().postDataJSON().signs.length;
+    replies.push(count);
+    // The first request (fewer signs) is held until the second one has answered.
+    if (replies.length === 1) { await second; await answered; await new Promise(resolve => setTimeout(resolve, 300)); }
+    else { secondArrived(); setTimeout(secondDone, 100); }
+    await route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify({ sentence: `Sentence for ${count}`, model: 'test', ms: 5 }) });
+  });
+  await page.addInitScript(loopingClip, '/references/fsl105-3.mp4');
+  await page.goto('/#interpret');
+  await expect(page.locator('.camera-status')).toContainText('Experimental model ready', { timeout: 30000 });
+  await page.getByLabel('Interpret after a 2-second rest').uncheck();
+  await expect(page.locator('.gloss-pill')).toHaveCount(1, { timeout: 20000 });
+  await page.locator('h1').click();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('.gloss-pill')).toHaveCount(2, { timeout: 20000 });
+  await page.keyboard.press('Enter');
+  await expect(page.locator('.interpret-sentence')).toHaveText(/Sentence for \d/);
+  await page.waitForTimeout(1500);
+  expect(replies).toHaveLength(2);
+  await expect(page.locator('.interpret-sentence')).toHaveText(`Sentence for ${replies[1]}`);
+});
+
+test('check my signs says try again for a different sign and good job for the target', async ({ page }) => {
+  // The looping licensed HELLO reference is the "signer". The first target is
+  // GOOD MORNING, so it must not earn a good job; HELLO must.
+  await page.addInitScript(loopingClip, '/references/fsl105-3.mp4');
+  await page.goto('/#interpret');
+  await expect(page.locator('.camera-status')).toContainText('Experimental model ready', { timeout: 30000 });
+  await page.getByRole('button', { name: 'Check my signs' }).click();
+  await expect(page.locator('#drill-title')).toHaveText('GOOD MORNING');
+  await expect(page.locator('.drill-verdict')).toHaveText(/Try again|Almost/, { timeout: 20000 });
+  // Every miss explains itself: five checks against the FSL-105 examples, and
+  // the camera shows the first thing to fix (or says all checks look close).
+  await expect(page.locator('.drill-checks li')).toHaveCount(5);
+  const fixes = await page.locator('.drill-checks li.fix > span:last-child').allTextContents();
+  await expect(page.locator('.drill-verdict-tip')).toHaveText(fixes[0] || /look close to the examples/);
+  await expect(page.locator('.closeness')).toHaveAttribute('aria-label', /How close: (Far from it|Getting there|Close)/);
+  await page.getByRole('button', { name: /Skip to next sign/ }).click();
+  await expect(page.locator('#drill-title')).toHaveText('HELLO');
+  await expect(page.locator('.drill-verdict')).toHaveText(/Good job!/, { timeout: 20000 });
+  await expect(page.locator('.drill-detail')).toHaveText('Good job! Recognized as HELLO.');
+  await expect(page.locator('.closeness')).toHaveAttribute('aria-label', 'How close: Recognized');
+  await expect(page.getByRole('button', { name: /^Next sign/ })).toBeVisible();
+  await expect(page.locator('.drill-verdict')).toHaveAttribute('role', 'status');
+});
+
+test('recording mode saves one labelled landmark sample per sign through the local route', async ({ page }) => {
+  const posts = [];
+  await page.route('**/api/webcam-trials', async route => {
+    posts.push(route.request().postDataJSON());
+    await route.fulfill({ status: 201, contentType: 'application/json', body: JSON.stringify({ saved: true, file: '.tools/webcam/test.jsonl' }) });
+  });
+  await page.addInitScript(loopingClip, '/references/fsl105-0.mp4');
+  await page.goto('/#interpret');
+  await page.getByRole('button', { name: 'Record my signs' }).click();
+  await expect(page.getByRole('heading', { name: 'GOOD MORNING' })).toBeVisible();
+  await page.getByRole('button', { name: 'Start recording' }).click({ timeout: 30000 });
+  await expect(page.getByRole('heading', { name: 'HELLO' })).toBeVisible({ timeout: 20000 });
+  const [sample] = posts;
+  expect(sample).toMatchObject({ type: 'sample', protocolVersion: 'vocab-record-v1', target: { datasetId: 0, gloss: 'GOOD MORNING' } });
+  expect(sample.rows.length).toBeGreaterThanOrEqual(4);
+  expect(sample.rows.every(row => row.length === 133)).toBe(true);
+  await page.getByRole('button', { name: 'Redo last' }).click();
+  await expect(page.getByRole('heading', { name: 'GOOD MORNING' })).toBeVisible();
+  expect(posts.at(-1)).toMatchObject({ type: 'discard', trialId: sample.trialId });
+});

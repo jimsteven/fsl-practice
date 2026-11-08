@@ -1,0 +1,2861 @@
+{
+  "evaluatedAt": "2026-11-03T18:12:08.622Z",
+  "modelHashes": {
+    "model": "a988e97859c0108be64d7da73f58dc7f31cc1a799a1bed5efb36429b50adb06a",
+    "weights": "95943d4ee6af442cd0d30a84675c9c36b0f87d534d3fe031870ada9a67b9d5d4"
+  },
+  "fsl105": {
+    "vocab": 100,
+    "correct": 93,
+    "wrong": 0,
+    "abstained": 7,
+    "rawTop1": 97,
+    "other": 158,
+    "falseAccepts": 36
+  },
+  "fsl105UnseenOther": {
+    "vocab": 0,
+    "correct": 0,
+    "wrong": 0,
+    "abstained": 0,
+    "rawTop1": 0,
+    "other": 76,
+    "falseAccepts": 22
+  },
+  "webcamHeldOut": null,
+  "perSign": [
+    {
+      "gloss": "GOOD MORNING",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "HELLO",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "HOW ARE YOU",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "I'M FINE",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "NICE TO MEET YOU",
+      "vocab": 5,
+      "correct": 5,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 5,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "THANK YOU",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "UNDERSTAND",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "DON'T UNDERSTAND",
+      "vocab": 4,
+      "correct": 3,
+      "wrong": 0,
+      "abstained": 1,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "KNOW",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "DON'T KNOW",
+      "vocab": 4,
+      "correct": 3,
+      "wrong": 0,
+      "abstained": 1,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "NO",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "YES",
+      "vocab": 4,
+      "correct": 3,
+      "wrong": 0,
+      "abstained": 1,
+      "rawTop1": 3,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "SLOW",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "FAST",
+      "vocab": 4,
+      "correct": 3,
+      "wrong": 0,
+      "abstained": 1,
+      "rawTop1": 3,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "TODAY",
+      "vocab": 3,
+      "correct": 3,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 3,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "TOMORROW",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "YESTERDAY",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "FATHER",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "MOTHER",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "DEAF",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "RICE",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "HOT",
+      "vocab": 4,
+      "correct": 1,
+      "wrong": 0,
+      "abstained": 3,
+      "rawTop1": 3,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "COLD",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "COFFEE",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    },
+    {
+      "gloss": "NO SUGAR",
+      "vocab": 4,
+      "correct": 4,
+      "wrong": 0,
+      "abstained": 0,
+      "rawTop1": 4,
+      "other": 0,
+      "falseAccepts": 0
+    }
+  ],
+  "limitations": "Clip-disjoint FSL-105 test (no signer IDs) plus any held-out webcam session. Isolated signs, not continuous sentences. Not signing-correctness or translation accuracy.",
+  "rows": [
+    {
+      "path": "clips/0/1.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 0,
+      "raw": 0,
+      "status": "suggestion",
+      "index": 0,
+      "score": 0.9998199343681335
+    },
+    {
+      "path": "clips/0/14.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 0,
+      "raw": 0,
+      "status": "suggestion",
+      "index": 0,
+      "score": 0.9999196529388428
+    },
+    {
+      "path": "clips/0/16.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 0,
+      "raw": 0,
+      "status": "suggestion",
+      "index": 0,
+      "score": 0.9848183393478394
+    },
+    {
+      "path": "clips/0/17.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 0,
+      "raw": 0,
+      "status": "suggestion",
+      "index": 0,
+      "score": 0.9130536317825317
+    },
+    {
+      "path": "clips/1/7.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 0,
+      "status": "unknown",
+      "index": 0,
+      "score": 0.5124496817588806
+    },
+    {
+      "path": "clips/1/10.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9078919291496277
+    },
+    {
+      "path": "clips/2/0.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9382458925247192
+    },
+    {
+      "path": "clips/2/9.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.7855274677276611
+    },
+    {
+      "path": "clips/3/3.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 1,
+      "raw": 1,
+      "status": "suggestion",
+      "index": 1,
+      "score": 0.9933657050132751
+    },
+    {
+      "path": "clips/3/4.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 1,
+      "raw": 1,
+      "status": "suggestion",
+      "index": 1,
+      "score": 0.9944650530815125
+    },
+    {
+      "path": "clips/3/6.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 1,
+      "raw": 1,
+      "status": "suggestion",
+      "index": 1,
+      "score": 0.9994972944259644
+    },
+    {
+      "path": "clips/3/19.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 1,
+      "raw": 1,
+      "status": "suggestion",
+      "index": 1,
+      "score": 0.9815748929977417
+    },
+    {
+      "path": "clips/4/4.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 2,
+      "raw": 2,
+      "status": "suggestion",
+      "index": 2,
+      "score": 0.9988848567008972
+    },
+    {
+      "path": "clips/4/5.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 2,
+      "raw": 2,
+      "status": "suggestion",
+      "index": 2,
+      "score": 0.9999902248382568
+    },
+    {
+      "path": "clips/4/11.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 2,
+      "raw": 2,
+      "status": "suggestion",
+      "index": 2,
+      "score": 1
+    },
+    {
+      "path": "clips/4/17.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 2,
+      "raw": 2,
+      "status": "suggestion",
+      "index": 2,
+      "score": 0.9961739182472229
+    },
+    {
+      "path": "clips/5/6.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 3,
+      "raw": 3,
+      "status": "suggestion",
+      "index": 3,
+      "score": 0.9999932050704956
+    },
+    {
+      "path": "clips/5/7.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 3,
+      "raw": 3,
+      "status": "suggestion",
+      "index": 3,
+      "score": 0.9995386600494385
+    },
+    {
+      "path": "clips/5/9.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 3,
+      "raw": 3,
+      "status": "suggestion",
+      "index": 3,
+      "score": 0.99998939037323
+    },
+    {
+      "path": "clips/5/12.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 3,
+      "raw": 3,
+      "status": "suggestion",
+      "index": 3,
+      "score": 0.9999995231628418
+    },
+    {
+      "path": "clips/6/4.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 4,
+      "raw": 4,
+      "status": "suggestion",
+      "index": 4,
+      "score": 0.9999759197235107
+    },
+    {
+      "path": "clips/6/9.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 4,
+      "raw": 4,
+      "status": "suggestion",
+      "index": 4,
+      "score": 0.999934196472168
+    },
+    {
+      "path": "clips/6/14.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 4,
+      "raw": 4,
+      "status": "suggestion",
+      "index": 4,
+      "score": 0.9995883107185364
+    },
+    {
+      "path": "clips/6/18.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 4,
+      "raw": 4,
+      "status": "suggestion",
+      "index": 4,
+      "score": 0.99998939037323
+    },
+    {
+      "path": "clips/6/20.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 4,
+      "raw": 4,
+      "status": "suggestion",
+      "index": 4,
+      "score": 0.9999266862869263
+    },
+    {
+      "path": "clips/7/6.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 5,
+      "raw": 5,
+      "status": "suggestion",
+      "index": 5,
+      "score": 0.9999998807907104
+    },
+    {
+      "path": "clips/7/9.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 5,
+      "raw": 5,
+      "status": "suggestion",
+      "index": 5,
+      "score": 1
+    },
+    {
+      "path": "clips/7/15.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 5,
+      "raw": 5,
+      "status": "suggestion",
+      "index": 5,
+      "score": 1
+    },
+    {
+      "path": "clips/7/16.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 5,
+      "raw": 5,
+      "status": "suggestion",
+      "index": 5,
+      "score": 1
+    },
+    {
+      "path": "clips/8/2.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9948851466178894
+    },
+    {
+      "path": "clips/8/7.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9999994039535522
+    },
+    {
+      "path": "clips/9/4.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9367838501930237
+    },
+    {
+      "path": "clips/9/9.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.7872273325920105
+    },
+    {
+      "path": "clips/10/3.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 6,
+      "raw": 6,
+      "status": "suggestion",
+      "index": 6,
+      "score": 0.9977003931999207
+    },
+    {
+      "path": "clips/10/7.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 6,
+      "raw": 6,
+      "status": "suggestion",
+      "index": 6,
+      "score": 0.9998794794082642
+    },
+    {
+      "path": "clips/10/14.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 6,
+      "raw": 6,
+      "status": "suggestion",
+      "index": 6,
+      "score": 0.9999990463256836
+    },
+    {
+      "path": "clips/10/18.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 6,
+      "raw": 6,
+      "status": "suggestion",
+      "index": 6,
+      "score": 0.9827242493629456
+    },
+    {
+      "path": "clips/11/1.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 7,
+      "raw": 7,
+      "status": "suggestion",
+      "index": 7,
+      "score": 0.9999862909317017
+    },
+    {
+      "path": "clips/11/5.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 7,
+      "raw": 7,
+      "status": "suggestion",
+      "index": 7,
+      "score": 0.9999830722808838
+    },
+    {
+      "path": "clips/11/10.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 7,
+      "raw": 7,
+      "status": "suggestion",
+      "index": 7,
+      "score": 0.9991980195045471
+    },
+    {
+      "path": "clips/11/17.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 7,
+      "raw": 7,
+      "status": "unknown",
+      "index": 7,
+      "score": 0.7594090104103088
+    },
+    {
+      "path": "clips/12/8.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 8,
+      "raw": 8,
+      "status": "suggestion",
+      "index": 8,
+      "score": 0.9999066591262817
+    },
+    {
+      "path": "clips/12/11.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 8,
+      "raw": 8,
+      "status": "suggestion",
+      "index": 8,
+      "score": 0.9999688863754272
+    },
+    {
+      "path": "clips/12/14.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 8,
+      "raw": 8,
+      "status": "suggestion",
+      "index": 8,
+      "score": 0.9999387264251709
+    },
+    {
+      "path": "clips/12/16.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 8,
+      "raw": 8,
+      "status": "suggestion",
+      "index": 8,
+      "score": 0.9994609951972961
+    },
+    {
+      "path": "clips/13/6.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 9,
+      "raw": 9,
+      "status": "suggestion",
+      "index": 9,
+      "score": 0.9964326620101929
+    },
+    {
+      "path": "clips/13/9.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 9,
+      "raw": 9,
+      "status": "suggestion",
+      "index": 9,
+      "score": 0.9488121867179871
+    },
+    {
+      "path": "clips/13/15.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 9,
+      "raw": 9,
+      "status": "suggestion",
+      "index": 9,
+      "score": 0.9655980467796326
+    },
+    {
+      "path": "clips/13/18.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 9,
+      "raw": 9,
+      "status": "unknown",
+      "index": 9,
+      "score": 0.8738457560539246
+    },
+    {
+      "path": "clips/14/2.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 10,
+      "raw": 10,
+      "status": "suggestion",
+      "index": 10,
+      "score": 0.9986448884010315
+    },
+    {
+      "path": "clips/14/5.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 10,
+      "raw": 10,
+      "status": "suggestion",
+      "index": 10,
+      "score": 0.9898730516433716
+    },
+    {
+      "path": "clips/14/12.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 10,
+      "raw": 10,
+      "status": "suggestion",
+      "index": 10,
+      "score": 0.9948955178260803
+    },
+    {
+      "path": "clips/14/14.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 10,
+      "raw": 10,
+      "status": "suggestion",
+      "index": 10,
+      "score": 0.9983288645744324
+    },
+    {
+      "path": "clips/15/2.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 11,
+      "raw": 11,
+      "status": "suggestion",
+      "index": 11,
+      "score": 0.9999184608459473
+    },
+    {
+      "path": "clips/15/6.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 11,
+      "raw": 16,
+      "status": "unknown",
+      "index": 16,
+      "score": 0.5961740016937256
+    },
+    {
+      "path": "clips/15/17.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 11,
+      "raw": 11,
+      "status": "suggestion",
+      "index": 11,
+      "score": 0.9999009370803833
+    },
+    {
+      "path": "clips/15/18.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 11,
+      "raw": 11,
+      "status": "suggestion",
+      "index": 11,
+      "score": 0.9975895881652832
+    },
+    {
+      "path": "clips/16/5.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 6,
+      "status": "suggestion",
+      "index": 6,
+      "score": 0.7461302876472473
+    },
+    {
+      "path": "clips/16/9.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9621578454971313
+    },
+    {
+      "path": "clips/17/4.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 23,
+      "status": "suggestion",
+      "index": 23,
+      "score": 0.9723037481307983
+    },
+    {
+      "path": "clips/17/12.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 23,
+      "status": "suggestion",
+      "index": 23,
+      "score": 0.9799318909645081
+    },
+    {
+      "path": "clips/18/2.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 12,
+      "raw": 12,
+      "status": "suggestion",
+      "index": 12,
+      "score": 0.9827365875244141
+    },
+    {
+      "path": "clips/18/3.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 12,
+      "raw": 12,
+      "status": "suggestion",
+      "index": 12,
+      "score": 0.9998751878738403
+    },
+    {
+      "path": "clips/18/4.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 12,
+      "raw": 12,
+      "status": "suggestion",
+      "index": 12,
+      "score": 0.9999996423721313
+    },
+    {
+      "path": "clips/18/11.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 12,
+      "raw": 12,
+      "status": "suggestion",
+      "index": 12,
+      "score": 1
+    },
+    {
+      "path": "clips/19/1.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 13,
+      "raw": 13,
+      "status": "suggestion",
+      "index": 13,
+      "score": 0.9866089224815369
+    },
+    {
+      "path": "clips/19/5.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 13,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.7301061153411865
+    },
+    {
+      "path": "clips/19/6.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 13,
+      "raw": 13,
+      "status": "suggestion",
+      "index": 13,
+      "score": 0.990376889705658
+    },
+    {
+      "path": "clips/19/12.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 13,
+      "raw": 13,
+      "status": "suggestion",
+      "index": 13,
+      "score": 0.995067834854126
+    },
+    {
+      "path": "clips/20/6.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.8104045987129211
+    },
+    {
+      "path": "clips/20/8.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 13,
+      "status": "unknown",
+      "index": 13,
+      "score": 0.7220821380615234
+    },
+    {
+      "path": "clips/21/7.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.8414488434791565
+    },
+    {
+      "path": "clips/21/8.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.7265322804450989
+    },
+    {
+      "path": "clips/22/1.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 0,
+      "status": "unknown",
+      "index": 0,
+      "score": 0.527771532535553
+    },
+    {
+      "path": "clips/22/11.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.7222359776496887
+    },
+    {
+      "path": "clips/23/3.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9938420057296753
+    },
+    {
+      "path": "clips/24/5.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9774979948997498
+    },
+    {
+      "path": "clips/24/13.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.995275616645813
+    },
+    {
+      "path": "clips/25/2.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9156104922294617
+    },
+    {
+      "path": "clips/25/7.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.8832173943519592
+    },
+    {
+      "path": "clips/26/1.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9652734994888306
+    },
+    {
+      "path": "clips/26/5.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.5884840488433838
+    },
+    {
+      "path": "clips/27/1.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9953762292861938
+    },
+    {
+      "path": "clips/27/13.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.7784591913223267
+    },
+    {
+      "path": "clips/28/6.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.6687628626823425
+    },
+    {
+      "path": "clips/28/7.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 0,
+      "status": "suggestion",
+      "index": 0,
+      "score": 0.9350725412368774
+    },
+    {
+      "path": "clips/29/0.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 15,
+      "status": "suggestion",
+      "index": 15,
+      "score": 0.9998263716697693
+    },
+    {
+      "path": "clips/29/2.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 15,
+      "status": "suggestion",
+      "index": 15,
+      "score": 0.9967269897460938
+    },
+    {
+      "path": "clips/30/2.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9994208812713623
+    },
+    {
+      "path": "clips/30/3.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9942072629928589
+    },
+    {
+      "path": "clips/31/7.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 4,
+      "status": "unknown",
+      "index": 4,
+      "score": 0.5226486921310425
+    },
+    {
+      "path": "clips/31/11.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9995399713516235
+    },
+    {
+      "path": "clips/32/4.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.999561607837677
+    },
+    {
+      "path": "clips/32/7.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 4,
+      "status": "unknown",
+      "index": 4,
+      "score": 0.5253733396530151
+    },
+    {
+      "path": "clips/33/3.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.8778313994407654
+    },
+    {
+      "path": "clips/33/6.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9966384172439575
+    },
+    {
+      "path": "clips/34/6.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9738020300865173
+    },
+    {
+      "path": "clips/34/7.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 4,
+      "status": "suggestion",
+      "index": 4,
+      "score": 0.9884791970252991
+    },
+    {
+      "path": "clips/35/9.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9196466207504272
+    },
+    {
+      "path": "clips/35/15.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9859181642532349
+    },
+    {
+      "path": "clips/36/0.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.992719292640686
+    },
+    {
+      "path": "clips/36/2.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9977144002914429
+    },
+    {
+      "path": "clips/37/2.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9971350431442261
+    },
+    {
+      "path": "clips/37/3.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9984555244445801
+    },
+    {
+      "path": "clips/38/2.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9864100813865662
+    },
+    {
+      "path": "clips/38/4.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9721735119819641
+    },
+    {
+      "path": "clips/39/1.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9934406876564026
+    },
+    {
+      "path": "clips/39/11.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9996077418327332
+    },
+    {
+      "path": "clips/40/4.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9994012117385864
+    },
+    {
+      "path": "clips/40/5.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9997605681419373
+    },
+    {
+      "path": "clips/41/6.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9773570895195007
+    },
+    {
+      "path": "clips/41/9.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9193152189254761
+    },
+    {
+      "path": "clips/42/1.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 10,
+      "status": "unknown",
+      "index": 10,
+      "score": 0.8591118454933167
+    },
+    {
+      "path": "clips/42/4.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 10,
+      "status": "unknown",
+      "index": 10,
+      "score": 0.7401406764984131
+    },
+    {
+      "path": "clips/43/1.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 13,
+      "status": "unknown",
+      "index": 13,
+      "score": 0.5224305391311646
+    },
+    {
+      "path": "clips/43/4.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 13,
+      "status": "unknown",
+      "index": 13,
+      "score": 0.6077398061752319
+    },
+    {
+      "path": "clips/44/2.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.6856643557548523
+    },
+    {
+      "path": "clips/44/13.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.6915075182914734
+    },
+    {
+      "path": "clips/45/6.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.7355313897132874
+    },
+    {
+      "path": "clips/45/9.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.8922346234321594
+    },
+    {
+      "path": "clips/46/5.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9889419078826904
+    },
+    {
+      "path": "clips/46/10.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9958832263946533
+    },
+    {
+      "path": "clips/47/0.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 22,
+      "status": "suggestion",
+      "index": 22,
+      "score": 0.9945587515830994
+    },
+    {
+      "path": "clips/47/5.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 22,
+      "status": "unknown",
+      "index": 22,
+      "score": 0.8428482413291931
+    },
+    {
+      "path": "clips/48/0.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9997484087944031
+    },
+    {
+      "path": "clips/48/4.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9999990463256836
+    },
+    {
+      "path": "clips/49/16.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 14,
+      "raw": 14,
+      "status": "suggestion",
+      "index": 14,
+      "score": 0.999976634979248
+    },
+    {
+      "path": "clips/49/18.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 14,
+      "raw": 14,
+      "status": "suggestion",
+      "index": 14,
+      "score": 0.9902722239494324
+    },
+    {
+      "path": "clips/49/19.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 14,
+      "raw": 14,
+      "status": "suggestion",
+      "index": 14,
+      "score": 1
+    },
+    {
+      "path": "clips/50/2.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 15,
+      "raw": 15,
+      "status": "suggestion",
+      "index": 15,
+      "score": 0.9953328967094421
+    },
+    {
+      "path": "clips/50/3.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 15,
+      "raw": 15,
+      "status": "suggestion",
+      "index": 15,
+      "score": 0.957915186882019
+    },
+    {
+      "path": "clips/50/5.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 15,
+      "raw": 15,
+      "status": "suggestion",
+      "index": 15,
+      "score": 0.9457518458366394
+    },
+    {
+      "path": "clips/50/19.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 15,
+      "raw": 15,
+      "status": "suggestion",
+      "index": 15,
+      "score": 0.9995405673980713
+    },
+    {
+      "path": "clips/51/5.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 16,
+      "raw": 16,
+      "status": "suggestion",
+      "index": 16,
+      "score": 0.998704195022583
+    },
+    {
+      "path": "clips/51/15.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 16,
+      "raw": 16,
+      "status": "suggestion",
+      "index": 16,
+      "score": 0.9679381847381592
+    },
+    {
+      "path": "clips/51/17.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 16,
+      "raw": 16,
+      "status": "suggestion",
+      "index": 16,
+      "score": 0.999997615814209
+    },
+    {
+      "path": "clips/51/18.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 16,
+      "raw": 16,
+      "status": "suggestion",
+      "index": 16,
+      "score": 0.9990130662918091
+    },
+    {
+      "path": "clips/52/9.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 17,
+      "raw": 17,
+      "status": "suggestion",
+      "index": 17,
+      "score": 0.9986095428466797
+    },
+    {
+      "path": "clips/52/13.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 17,
+      "raw": 17,
+      "status": "suggestion",
+      "index": 17,
+      "score": 0.9999430179595947
+    },
+    {
+      "path": "clips/52/17.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 17,
+      "raw": 17,
+      "status": "suggestion",
+      "index": 17,
+      "score": 0.9998737573623657
+    },
+    {
+      "path": "clips/52/18.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 17,
+      "raw": 17,
+      "status": "suggestion",
+      "index": 17,
+      "score": 0.9999759197235107
+    },
+    {
+      "path": "clips/53/0.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 18,
+      "raw": 18,
+      "status": "suggestion",
+      "index": 18,
+      "score": 0.9997681975364685
+    },
+    {
+      "path": "clips/53/2.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 18,
+      "raw": 18,
+      "status": "suggestion",
+      "index": 18,
+      "score": 0.999685525894165
+    },
+    {
+      "path": "clips/53/8.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 18,
+      "raw": 18,
+      "status": "suggestion",
+      "index": 18,
+      "score": 0.9995303153991699
+    },
+    {
+      "path": "clips/53/18.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 18,
+      "raw": 18,
+      "status": "suggestion",
+      "index": 18,
+      "score": 0.9975730776786804
+    },
+    {
+      "path": "clips/54/0.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9999998807907104
+    },
+    {
+      "path": "clips/54/1.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9999991655349731
+    },
+    {
+      "path": "clips/55/7.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.997922956943512
+    },
+    {
+      "path": "clips/56/6.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 1,
+      "status": "suggestion",
+      "index": 1,
+      "score": 0.9178813099861145
+    },
+    {
+      "path": "clips/56/7.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 1,
+      "status": "suggestion",
+      "index": 1,
+      "score": 0.9503591060638428
+    },
+    {
+      "path": "clips/57/3.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.7346968054771423
+    },
+    {
+      "path": "clips/57/7.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.994476854801178
+    },
+    {
+      "path": "clips/58/4.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 19,
+      "status": "unknown",
+      "index": 19,
+      "score": 0.7055123448371887
+    },
+    {
+      "path": "clips/58/7.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 9,
+      "status": "unknown",
+      "index": 9,
+      "score": 0.7069299221038818
+    },
+    {
+      "path": "clips/59/2.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 16,
+      "status": "unknown",
+      "index": 16,
+      "score": 0.6879420876502991
+    },
+    {
+      "path": "clips/59/11.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 13,
+      "status": "unknown",
+      "index": 13,
+      "score": 0.7079249620437622
+    },
+    {
+      "path": "clips/60/0.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 1,
+      "status": "suggestion",
+      "index": 1,
+      "score": 0.9886220097541809
+    },
+    {
+      "path": "clips/60/12.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 1,
+      "status": "suggestion",
+      "index": 1,
+      "score": 0.9917563199996948
+    },
+    {
+      "path": "clips/61/4.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 17,
+      "status": "unknown",
+      "index": 17,
+      "score": 0.7638803124427795
+    },
+    {
+      "path": "clips/61/9.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.5264379978179932
+    },
+    {
+      "path": "clips/62/3.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9054458141326904
+    },
+    {
+      "path": "clips/62/11.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 7,
+      "status": "unknown",
+      "index": 7,
+      "score": 0.997892439365387
+    },
+    {
+      "path": "clips/63/4.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.5562214255332947
+    },
+    {
+      "path": "clips/63/8.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 7,
+      "status": "unknown",
+      "index": 7,
+      "score": 0.7306961417198181
+    },
+    {
+      "path": "clips/64/3.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.8388686776161194
+    },
+    {
+      "path": "clips/64/8.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.6061033010482788
+    },
+    {
+      "path": "clips/65/7.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 16,
+      "status": "suggestion",
+      "index": 16,
+      "score": 0.9998118281364441
+    },
+    {
+      "path": "clips/65/8.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 16,
+      "status": "suggestion",
+      "index": 16,
+      "score": 0.9999135732650757
+    },
+    {
+      "path": "clips/66/5.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 19,
+      "raw": 19,
+      "status": "suggestion",
+      "index": 19,
+      "score": 0.9968131184577942
+    },
+    {
+      "path": "clips/66/6.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 19,
+      "raw": 19,
+      "status": "suggestion",
+      "index": 19,
+      "score": 0.9858642220497131
+    },
+    {
+      "path": "clips/66/11.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 19,
+      "raw": 19,
+      "status": "suggestion",
+      "index": 19,
+      "score": 0.9655364751815796
+    },
+    {
+      "path": "clips/66/12.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 19,
+      "raw": 19,
+      "status": "suggestion",
+      "index": 19,
+      "score": 0.9928977489471436
+    },
+    {
+      "path": "clips/67/0.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.6953420639038086
+    },
+    {
+      "path": "clips/67/10.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9543351531028748
+    },
+    {
+      "path": "clips/68/4.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9943027496337891
+    },
+    {
+      "path": "clips/68/8.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 11,
+      "status": "unknown",
+      "index": 11,
+      "score": 0.7296950221061707
+    },
+    {
+      "path": "clips/69/5.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.8119967579841614
+    },
+    {
+      "path": "clips/69/15.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.924382746219635
+    },
+    {
+      "path": "clips/70/3.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.988937258720398
+    },
+    {
+      "path": "clips/70/8.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9926974177360535
+    },
+    {
+      "path": "clips/71/1.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 0,
+      "status": "suggestion",
+      "index": 0,
+      "score": 0.9754701256752014
+    },
+    {
+      "path": "clips/71/5.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9719440340995789
+    },
+    {
+      "path": "clips/72/1.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9976711869239807
+    },
+    {
+      "path": "clips/72/2.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9499818086624146
+    },
+    {
+      "path": "clips/73/6.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 15,
+      "status": "suggestion",
+      "index": 15,
+      "score": 0.9992057681083679
+    },
+    {
+      "path": "clips/73/8.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 15,
+      "status": "suggestion",
+      "index": 15,
+      "score": 0.9995217323303223
+    },
+    {
+      "path": "clips/74/3.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.8641981482505798
+    },
+    {
+      "path": "clips/74/10.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9938429594039917
+    },
+    {
+      "path": "clips/75/9.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 20,
+      "status": "suggestion",
+      "index": 20,
+      "score": 0.9735202789306641
+    },
+    {
+      "path": "clips/75/13.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 20,
+      "status": "unknown",
+      "index": 20,
+      "score": 0.6723293662071228
+    },
+    {
+      "path": "clips/76/10.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.8074759840965271
+    },
+    {
+      "path": "clips/76/15.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.965213418006897
+    },
+    {
+      "path": "clips/77/4.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9184263944625854
+    },
+    {
+      "path": "clips/77/6.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9998636245727539
+    },
+    {
+      "path": "clips/78/3.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 15,
+      "status": "suggestion",
+      "index": 15,
+      "score": 0.7291355729103088
+    },
+    {
+      "path": "clips/78/8.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 9,
+      "status": "unknown",
+      "index": 9,
+      "score": 0.5937661528587341
+    },
+    {
+      "path": "clips/79/0.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9824761152267456
+    },
+    {
+      "path": "clips/79/1.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9959924817085266
+    },
+    {
+      "path": "clips/80/1.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9992756247520447
+    },
+    {
+      "path": "clips/80/3.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9911779761314392
+    },
+    {
+      "path": "clips/81/0.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.7496832609176636
+    },
+    {
+      "path": "clips/81/5.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9831783175468445
+    },
+    {
+      "path": "clips/82/3.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9999094009399414
+    },
+    {
+      "path": "clips/82/5.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.999169111251831
+    },
+    {
+      "path": "clips/83/3.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 0,
+      "status": "suggestion",
+      "index": 0,
+      "score": 0.9962908029556274
+    },
+    {
+      "path": "clips/83/4.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 0,
+      "status": "suggestion",
+      "index": 0,
+      "score": 0.9999226331710815
+    },
+    {
+      "path": "clips/84/6.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.994251012802124
+    },
+    {
+      "path": "clips/84/12.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9499002695083618
+    },
+    {
+      "path": "clips/85/0.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 4,
+      "status": "suggestion",
+      "index": 4,
+      "score": 0.921567440032959
+    },
+    {
+      "path": "clips/85/1.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9577624201774597
+    },
+    {
+      "path": "clips/86/3.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 12,
+      "status": "suggestion",
+      "index": 12,
+      "score": 0.9517573118209839
+    },
+    {
+      "path": "clips/86/7.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 12,
+      "status": "suggestion",
+      "index": 12,
+      "score": 0.9569826126098633
+    },
+    {
+      "path": "clips/87/1.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.951545774936676
+    },
+    {
+      "path": "clips/87/10.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.999768078327179
+    },
+    {
+      "path": "clips/88/3.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 20,
+      "status": "suggestion",
+      "index": 20,
+      "score": 0.9502747058868408
+    },
+    {
+      "path": "clips/88/7.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 20,
+      "status": "suggestion",
+      "index": 20,
+      "score": 0.9578970074653625
+    },
+    {
+      "path": "clips/89/2.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 17,
+      "status": "suggestion",
+      "index": 17,
+      "score": 0.9124941229820251
+    },
+    {
+      "path": "clips/89/4.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 17,
+      "status": "suggestion",
+      "index": 17,
+      "score": 0.945903480052948
+    },
+    {
+      "path": "clips/90/2.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.962799608707428
+    },
+    {
+      "path": "clips/90/4.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9460848569869995
+    },
+    {
+      "path": "clips/91/2.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 20,
+      "raw": 20,
+      "status": "suggestion",
+      "index": 20,
+      "score": 0.9999783039093018
+    },
+    {
+      "path": "clips/91/5.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 20,
+      "raw": 20,
+      "status": "suggestion",
+      "index": 20,
+      "score": 1
+    },
+    {
+      "path": "clips/91/9.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 20,
+      "raw": 20,
+      "status": "suggestion",
+      "index": 20,
+      "score": 1
+    },
+    {
+      "path": "clips/91/16.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 20,
+      "raw": 20,
+      "status": "suggestion",
+      "index": 20,
+      "score": 0.9999992847442627
+    },
+    {
+      "path": "clips/92/4.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9051659107208252
+    },
+    {
+      "path": "clips/92/12.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 11,
+      "status": "suggestion",
+      "index": 11,
+      "score": 0.9092444181442261
+    },
+    {
+      "path": "clips/93/1.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 15,
+      "status": "suggestion",
+      "index": 15,
+      "score": 1
+    },
+    {
+      "path": "clips/93/3.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 15,
+      "status": "suggestion",
+      "index": 15,
+      "score": 0.9999819993972778
+    },
+    {
+      "path": "clips/94/5.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9999316930770874
+    },
+    {
+      "path": "clips/94/9.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9999269247055054
+    },
+    {
+      "path": "clips/95/1.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 21,
+      "raw": 21,
+      "status": "unknown",
+      "index": 21,
+      "score": 0.5258663296699524
+    },
+    {
+      "path": "clips/95/10.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 21,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.4616137146949768
+    },
+    {
+      "path": "clips/95/12.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 21,
+      "raw": 21,
+      "status": "unknown",
+      "index": 21,
+      "score": 0.8615629076957703
+    },
+    {
+      "path": "clips/95/17.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 21,
+      "raw": 21,
+      "status": "suggestion",
+      "index": 21,
+      "score": 0.9949393272399902
+    },
+    {
+      "path": "clips/96/8.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 22,
+      "raw": 22,
+      "status": "suggestion",
+      "index": 22,
+      "score": 0.9971523284912109
+    },
+    {
+      "path": "clips/96/13.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 22,
+      "raw": 22,
+      "status": "suggestion",
+      "index": 22,
+      "score": 0.999998927116394
+    },
+    {
+      "path": "clips/96/15.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 22,
+      "raw": 22,
+      "status": "suggestion",
+      "index": 22,
+      "score": 0.9999971389770508
+    },
+    {
+      "path": "clips/96/19.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 22,
+      "raw": 22,
+      "status": "suggestion",
+      "index": 22,
+      "score": 0.999852180480957
+    },
+    {
+      "path": "clips/97/5.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 12,
+      "status": "unknown",
+      "index": 12,
+      "score": 0.49461475014686584
+    },
+    {
+      "path": "clips/97/12.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9933803081512451
+    },
+    {
+      "path": "clips/98/3.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9190844893455505
+    },
+    {
+      "path": "clips/98/4.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.5002815127372742
+    },
+    {
+      "path": "clips/99/7.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 23,
+      "raw": 23,
+      "status": "suggestion",
+      "index": 23,
+      "score": 1
+    },
+    {
+      "path": "clips/99/9.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 23,
+      "raw": 23,
+      "status": "suggestion",
+      "index": 23,
+      "score": 0.9999309778213501
+    },
+    {
+      "path": "clips/99/16.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 23,
+      "raw": 23,
+      "status": "suggestion",
+      "index": 23,
+      "score": 0.9668972492218018
+    },
+    {
+      "path": "clips/99/18.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 23,
+      "raw": 23,
+      "status": "suggestion",
+      "index": 23,
+      "score": 0.9999778270721436
+    },
+    {
+      "path": "clips/100/5.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 2,
+      "status": "unknown",
+      "index": 2,
+      "score": 0.8667221069335938
+    },
+    {
+      "path": "clips/100/10.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 23,
+      "status": "suggestion",
+      "index": 23,
+      "score": 0.9999954700469971
+    },
+    {
+      "path": "clips/101/5.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 16,
+      "status": "suggestion",
+      "index": 16,
+      "score": 0.9975007176399231
+    },
+    {
+      "path": "clips/101/6.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 16,
+      "status": "suggestion",
+      "index": 16,
+      "score": 0.999565064907074
+    },
+    {
+      "path": "clips/102/1.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9532659649848938
+    },
+    {
+      "path": "clips/102/2.MOV",
+      "source": "fsl105",
+      "group": "seen-class",
+      "expected": 25,
+      "raw": 25,
+      "status": "unknown",
+      "index": 25,
+      "score": 0.9308167695999146
+    },
+    {
+      "path": "clips/103/4.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 24,
+      "status": "suggestion",
+      "index": 24,
+      "score": 0.9999078512191772
+    },
+    {
+      "path": "clips/103/8.MOV",
+      "source": "fsl105",
+      "group": "unseen-class",
+      "expected": 25,
+      "raw": 24,
+      "status": "suggestion",
+      "index": 24,
+      "score": 0.9998506307601929
+    },
+    {
+      "path": "clips/104/0.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 24,
+      "raw": 24,
+      "status": "suggestion",
+      "index": 24,
+      "score": 0.9999681711196899
+    },
+    {
+      "path": "clips/104/1.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 24,
+      "raw": 24,
+      "status": "suggestion",
+      "index": 24,
+      "score": 0.9997252821922302
+    },
+    {
+      "path": "clips/104/3.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 24,
+      "raw": 24,
+      "status": "suggestion",
+      "index": 24,
+      "score": 0.9994558691978455
+    },
+    {
+      "path": "clips/104/8.MOV",
+      "source": "fsl105",
+      "group": "vocab",
+      "expected": 24,
+      "raw": 24,
+      "status": "suggestion",
+      "index": 24,
+      "score": 0.9993725419044495
+    }
+  ]
+}

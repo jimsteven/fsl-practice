@@ -1,5 +1,29 @@
 # Local deployment verification / personal project
 
+## Portable installation — 2026-11-08
+
+The shell/PowerShell installers bootstrap Node 24.11.0, install npm dependencies and pinned tracking assets, verify the included reference videos, build, install Ollama 0.40.15, and download/load the selected local LLM. They require no Git, Python, FFmpeg, global Node or administrator access. The GitHub repository remains private, so download/extract its source ZIP while authenticated before running the one installation command.
+
+**Executed on macOS ARM64:** fresh Node bootstrap and app installation; fresh Ollama archive/checksum/extraction/start and `gemma3:270m` download; real `/api/interpret` returned a nonempty sentence; repeated launch; existing Personal Mac Ollama reused with `gemma3:12b`. The tiny 270M model is an installation/inference smoke test, not a sentence-quality evaluation. Initial cold loading exceeded the app's request timeout; installers/launchers now preload the model with a five-minute deadline before announcing readiness. The default remains 12B. `--skip-llm` explicitly disables sentence generation while retaining local recognition.
+
+**Regression checks:** lint, production build, 13 Node tests and all 31 existing browser tests passed. Node tests cover foreign/stale port refusal and LLM-disabled serving. The updated Interpret caption was checked at desktop/390 px with no horizontal overflow. Browser tests use synthetic media or attributed FSL-105 reference replays, not a secretly opened physical webcam.
+
+**Other platforms:** `.github/workflows/install.yml` runs the actual installer, repeat launch, unit tests and real tiny-model inference on macOS, Ubuntu and Windows. No local Windows or Linux machine was used for this verification; refer to that workflow's results rather than assuming these platforms passed. GPU-driver installation, optional AMD/Jetson accelerators, Alpine/musl and 32-bit computers are outside the supported installer scope. No public Box redeployment was performed.
+
+## Interpret demo and Check my signs — 2026-11-03 UTC
+
+Local build on the Personal Mac adds `#interpret` with three modes: **Interpret** (signs lock in as gloss pills with a face-based expression tag, then the local LLM suggests an English sentence with added words underlined), **Check my signs** (one target sign with its reference; the camera shows **Good job!** when the model recognizes that sign, otherwise **Try again** with what it saw), and **Record my signs** (landmark samples for retraining). Vocabulary model **fsl105-vocab25-cnn-v1**; LLM **gemma3:12b** in Ollama on the Mac.
+
+**Passed on the Personal Mac:** lint; 11 Node tests; production build; **31/31 browser tests** against localhost:5173, including: a looping HELLO clip gets *Try again* when the target is GOOD MORNING and *Good job!* when it is HELLO; a slower earlier LLM reply can't replace a newer one (this test failed on the previous build, which showed a stale sentence); recording saves through the local route. axe found no WCAG A/AA violations and no horizontal overflow in the Try again and Good job states at 1440 px and 390 px.
+
+**Model evidence (FSL-105 test clips, scored once):** 25 signs 93/100 correct, 0 wrong, 7 abstained; other signs 36/158 falsely accepted (22/76 unseen). Replays of held-out clips through the real page: HELLO HOW ARE YOU I'M FINE → "Hello, how are you? I'm fine."; DEAF DON'T UNDERSTAND SLOW → "I'm deaf, I don't understand, slower please."; GOOD MORNING MOTHER COFFEE HOT NO SUGAR lost HOT in one run and COFFEE in another (the LLM then added "coffee" itself, shown underlined).
+
+**LLM comparison** on 12 fixed chains through `/api/interpret`: gemma3:4b about 1.8 s per sentence but wrote expression tags into sentences ("Is the coffee skeptical today, no?") and joined words oddly; gemma3:12b about 5.9 s with no tag leaks, occasionally adding a fact ("Will Mom be there tomorrow?"). `FSL_LLM_MODEL=gemma3:4b` switches back.
+
+**Tips for Check my signs** (`training/vocab-profiles.mjs`, profiles from train + calibration clips, thresholds set by hand before the test check): correct test clips with no tip 89/101; another sign's clip judged against a target gets at least one tip 2246/2424; deliberately changed correct clips get the matching tip: hand lowered 77/81, raised 101/101, fingers folded 101/101, movement frozen 80/80. Movement direction is not checked because net travel in FSL-105 is dominated by the hand entering and leaving.
+
+Still not tested: Jim's own webcam and signing, continuous natural signing, signer-independent data, expert review. "Good job" means the model recognized the target sign, not that a teacher would accept it.
+
 ## Guided practice, Webcam test and recognition update — 2026-11-02 UTC
 
 Deployed build **29c640ada6bacd60** adds the guided countdown, framing cues, Try again / Next sign, the Webcam test page (`#test`) with its local `POST /api/webcam-trials` route, and model **fsl105-numbers1-5-other-cnn-v2** with preprocessing **one-hand-main-segment-xyz-v3**. Practice internals were split into `src/live.js` hooks shared with the Webcam test page.

@@ -1,17 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
 import Practice, { ReferencePanel } from './Practice.jsx';
 import WebcamTest from './WebcamTest.jsx';
+import Interpret from './Interpret.jsx';
 import { candidates, referenceSource } from './content.js';
 import { duration, summarize } from './sessions.js';
 import { readSessions, saveSession, saveReviewNote, clearSessions, exportSessions, retentionDescription } from './storage.js';
 
 const pages = [
   { id: 'practice', label: 'Practice', number: '01' },
-  { id: 'test', label: 'Webcam test', number: '02' },
-  { id: 'learn', label: 'Library', number: '03' },
-  { id: 'progress', label: 'Sessions', number: '04' },
-  { id: 'teacher', label: 'Review', number: '05' },
-  { id: 'privacy', label: 'Settings', number: '06' }
+  { id: 'interpret', label: 'Interpret', number: '02' },
+  { id: 'test', label: 'Webcam test', number: '03' },
+  { id: 'learn', label: 'Library', number: '04' },
+  { id: 'progress', label: 'Sessions', number: '05' },
+  { id: 'teacher', label: 'Review', number: '06' },
+  { id: 'privacy', label: 'Settings', number: '07' }
 ];
 const readRoute = () => {
   const hash = window.location.hash.slice(1).split('?')[0];
@@ -19,6 +21,7 @@ const readRoute = () => {
 };
 const headings = {
   practice: ['Your practice desk.', 'Filipino Sign Language. A personal study workspace.'],
+  interpret: ['Sign it. Read it back.', 'Experimental demo for personal practice: signs become glosses, then a local LLM suggests an English sentence.'],
   test: ['Test the model on your webcam.', 'A guided check of the experimental number model: correct suggestions, wrong suggestions and refusals, counted separately.'],
   learn: ['Start with the source.', 'Attributed Filipino Sign Language video references, served with this app.'],
   progress: ['Time you made for practice.', 'A saved local practice log, not a measure of signing ability.'],
@@ -94,7 +97,7 @@ function Teacher({ sessions, onSaveNote }) {
 
 function Privacy({ mirror, setMirror, overlay, setOverlay }) {
   return <div className="settings-layout">
-    <section><h2>Camera, without the cloud.</h2><p>The camera starts automatically in Practice. Chrome reuses its saved permission for this site, or asks you to allow access. Permission is managed by Chrome, not stored as an app preference; a one-time grant may expire. Video frames and transient MediaPipe landmarks stay on this device. No microphone, recording, uploads, analytics or remote inference.</p><p>Leaving Practice, hiding the tab, or closing the page releases the camera. Returning to Practice or the visible tab resumes it automatically, unless a camera error needs a retry. HTTPS or localhost and camera permission are required. Choose Library to browse without a camera.</p><h2>Recognition follows your focus.</h2><p>Numbers 1–5 load the experimental local matcher automatically. Other signs use tracking only. Begin attempt still starts each timed exercise; choosing a new focus discards the unsaved attempt. Model suggestions are not signing grades.</p><h2>Webcam test data.</h2><p>On the owner’s own Mac, the Webcam test page is the one place that saves hand landmark coordinates: each check’s landmarks and model answer go to <strong>.tools/webcam</strong> in the project folder for evaluation and retraining. On the shared web version nothing is saved or uploaded; results stay in your browser unless you download them. No video or images are saved anywhere.</p><h2>A local practice log.</h2><p>{retentionDescription} Aggregate timing, hand counts, model suggestions (when available), and your notes are stored in IndexedDB. No video, screenshots or raw landmark sequences are saved. No Firebase or cloud account is involved.</p><p>Use the same browser profile and address each time. Incognito, another browser, 127.0.0.1 or clearing site data uses a different or empty log. Export from Sessions before changing browsers.</p><a className="button" href="#progress">Export or delete saved attempts ↗</a></section>
+    <section><h2>Camera, without the cloud.</h2><p>The camera starts automatically in Practice. Chrome reuses its saved permission for this site, or asks you to allow access. Permission is managed by Chrome, not stored as an app preference; a one-time grant may expire. Video frames and transient MediaPipe landmarks stay on this device. No microphone, recording, uploads, analytics or remote inference.</p><p>Leaving Practice, hiding the tab, or closing the page releases the camera. Returning to Practice or the visible tab resumes it automatically, unless a camera error needs a retry. HTTPS or localhost and camera permission are required. Choose Library to browse without a camera.</p><h2>Recognition follows your focus.</h2><p>Numbers 1–5 load the experimental local matcher automatically. Other signs use tracking only. Begin attempt still starts each timed exercise; choosing a new focus discards the unsaved attempt. Model suggestions are not signing grades.</p><h2>Interpret and the local LLM.</h2><p>The Interpret page also tracks your face (on this device) to anchor hand positions and estimate an expression per sign. Only the recognized glosses and expression tags are sent to the local server, which asks Ollama on the owner’s Mac for an English sentence. Video, face and hand landmarks are never sent. On the shared web version there is no LLM. Recordings made with Record my signs are saved like Webcam test data below.</p><h2>Webcam test data.</h2><p>On the owner’s own Mac, the Webcam test page is the one place that saves hand landmark coordinates: each check’s landmarks and model answer go to <strong>.tools/webcam</strong> in the project folder for evaluation and retraining. On the shared web version nothing is saved or uploaded; results stay in your browser unless you download them. No video or images are saved anywhere.</p><h2>A local practice log.</h2><p>{retentionDescription} Aggregate timing, hand counts, model suggestions (when available), and your notes are stored in IndexedDB. No video, screenshots or raw landmark sequences are saved. No Firebase or cloud account is involved.</p><p>Use the same browser profile and address each time. Incognito, another browser, 127.0.0.1 or clearing site data uses a different or empty log. Export from Sessions before changing browsers.</p><a className="button" href="#progress">Export or delete saved attempts ↗</a></section>
     <section className="settings-side"><span className="eyebrow">Your workspace</span><label className="setting-row"><span><strong>Mirror preview</strong><small>Display only; not signing guidance.</small></span><input type="checkbox" checked={mirror} onChange={e => setMirror(e.target.checked)} /></label><label className="setting-row"><span><strong>Landmark overlay</strong><small>Show the tracker’s 21 points per hand.</small></span><input type="checkbox" checked={overlay} onChange={e => setOverlay(e.target.checked)} /></label><p>Preferences last for this tab only. System text size, keyboard focus, and reduced-motion preferences are respected.</p><hr /><h2>Before this grows.</h2><p>This is one personal browser profile, not authenticated access control. Do not collect other people’s or children’s records here. Remote teaching, recording, dataset contributions and school use require separate safeguards.</p><a href="#learn">Browse without a camera <span aria-hidden="true">↗</span></a></section>
   </div>;
 }
@@ -143,6 +146,7 @@ export default function App() {
       {storageError && <p className="camera-status error" role="alert">Saved log unavailable: {storageError} Practice is still available. Reload to retry loading saved records.</p>}
       {loading && <p className="small-label" role="status">Opening your local log…</p>}
       {route === 'practice' && <Practice selected={selected} onSelect={item => { window.location.hash = item ? `practice?sign=${item.id}` : 'practice'; }} onSave={session => persist(() => saveSession(session))} {...{ mirror, setMirror, overlay, setOverlay }} />}
+      {route === 'interpret' && <Interpret {...{ mirror, overlay }} />}
       {route === 'test' && <WebcamTest {...{ mirror, overlay }} />}
       {route === 'learn' && <Library onSelect={choose} />}
       {route === 'detail' && <><a className="back-link" href="#learn">← Back to library</a><div className="detail-layout"><ReferencePanel selected={selected} /><section><span className="eyebrow">{selected?.group || 'Planning label'}</span><h2>{selected?.reference ? selected.label : 'Not available for instruction.'}</h2><p>{selected?.reference ? 'Watch the complete original movement. Play, pause, replay or slow the video; nothing starts automatically. The source demonstration is not mirrored. Mirroring your own preview changes display only.' : 'No approved reference has been supplied for this planning label. We won’t substitute another sign language or generated signing hands.'}</p><p>{selected?.recognitionSupported ? 'An experimental local matcher can compare a four-second attempt among numbers 1–5. It cannot assess your complete signing or certify correctness.' : 'Video reference and tracking practice are available; automatic recognition of this sign is not supported.'}</p><a className="button primary" href={selected ? `#practice?sign=${selected.id}` : '#practice'}>Open practice <span aria-hidden="true">↗</span></a></section></div></>}

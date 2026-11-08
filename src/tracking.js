@@ -6,9 +6,18 @@ export function projectPoint(point, width, height) {
   return { x: point.x * width, y: point.y * height };
 }
 
-export function drawLandmarks(canvas, hands, color) {
+export function drawLandmarks(canvas, hands, color, face = null) {
   const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  if (face) {
+    ctx.fillStyle = color;
+    ctx.globalAlpha = .55;
+    for (let i = 0; i < face.length; i += 2) {
+      const p = projectPoint(face[i], canvas.width, canvas.height);
+      ctx.fillRect(p.x - 1, p.y - 1, 2, 2);
+    }
+    ctx.globalAlpha = 1;
+  }
   ctx.strokeStyle = color;
   ctx.fillStyle = color;
   ctx.lineWidth = Math.max(2, canvas.width / 320);
@@ -51,8 +60,8 @@ export function cameraError(error) {
 // One owner for camera, worker, and frame scheduling. stop() also invalidates
 // pending permission / video / worker work, including a late-resolving stream.
 export class CameraSession {
-  constructor({ video, onState, onResult, getUserMedia = constraints => navigator.mediaDevices.getUserMedia(constraints), makeWorker = () => new Worker(new URL('./tracking.worker.js', import.meta.url), { type: 'module' }) }) {
-    Object.assign(this, { video, onState, onResult, getUserMedia, makeWorker });
+  constructor({ video, onState, onResult, face = false, getUserMedia = constraints => navigator.mediaDevices.getUserMedia(constraints), makeWorker = () => new Worker(new URL('./tracking.worker.js', import.meta.url), { type: 'module' }) }) {
+    Object.assign(this, { video, onState, onResult, face, getUserMedia, makeWorker });
     this.generation = 0;
   }
 
@@ -103,7 +112,7 @@ export class CameraSession {
           this.onResult(data);
         } else if (data.type === 'error') this.fail(data.message);
       };
-      worker.postMessage({ type: 'init' });
+      worker.postMessage({ type: 'init', face: this.face });
       const tick = async now => {
         if (!current()) return;
         this.raf = requestAnimationFrame(tick);

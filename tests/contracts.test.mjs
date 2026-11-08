@@ -106,3 +106,49 @@ test('the trailing "other" class always abstains, even with a confident score', 
   assert.equal(decidePrediction([.01, .01, .9, .01, .01, .06], Array(63).fill(0), manifest).label, 'Three');
   assert.equal(decidePrediction([.01, .01, .9, .01, .01, .06], Array(63).fill(2), manifest).reason, 'novel-shape');
 });
+
+test('vocabulary features anchor hands to the face, mirror by slot swap, and segment on rests', async () => {
+  const { frameFeatures, mirrorSequence, createSegmenter, markAddedWords, HAND_SIZE, VOCAB_FRAME_SIZE, REST_MS } = await import('../src/vocab.js');
+  const face = Array.from({ length: 300 }, () => ({ x: .5, y: .3, z: 0 }));
+  face[1] = { x: .5, y: .3, z: 0 }; face[33] = { x: .45, y: .25, z: 0 }; face[263] = { x: .55, y: .25, z: 0 };
+  const hand = (x, y) => Array.from({ length: 21 }, (_, i) => ({ x: x + (i % 5) * .01, y: y - Math.floor(i / 5) * .02, z: 0 }));
+  const right = frameFeatures([hand(.7, .5)], face);
+  assert.equal(right.length, VOCAB_FRAME_SIZE);
+  assert.equal(right[0], 1);
+  assert.equal(right[1], 0); // image-left slot empty
+  assert.equal(right[1 + HAND_SIZE], 1);
+  assert.ok(Math.abs(right[2 + HAND_SIZE] - 2) < 1e-9 && Math.abs(right[3 + HAND_SIZE] - 2) < 1e-9); // (0.2, 0.2) / eye distance 0.1
+  const moved = frameFeatures([hand(.7, .5).map(p => ({ ...p, x: p.x + .1 }))], face.map(p => ({ ...p, x: p.x + .1 })));
+  moved.forEach((v, i) => assert.ok(Math.abs(v - right[i]) < 1e-9)); // translation-invariant relative to the face
+  const [mirrored] = mirrorSequence([right]);
+  assert.equal(mirrored[1], 1); assert.equal(mirrored[1 + HAND_SIZE], 0);
+  assert.equal(mirrored[2], -right[2 + HAND_SIZE]);
+  assert.deepEqual(mirrorSequence(mirrorSequence([right]))[0], right);
+  const segmenter = createSegmenter();
+  const rest = frameFeatures([], face);
+  assert.equal(segmenter.push(rest, 0).type, 'rest');
+  for (let t = 100; t <= 900; t += 100) assert.equal(segmenter.push(right, t).type, 'signing');
+  assert.equal(segmenter.push(rest, 900 + REST_MS - 50).type, 'signing');
+  const done = segmenter.push(rest, 900 + REST_MS);
+  assert.equal(done.type, 'segment');
+  assert.equal(done.rows.filter(r => r[1 + HAND_SIZE] === 1).length, 9);
+  assert.equal(segmenter.push(rest, 2000).type, 'rest');
+  const low = frameFeatures([hand(.7, 1.1)], face); // hands resting low in view are not signing
+  assert.equal(segmenter.push(low, 2100).type, 'rest');
+  assert.deepEqual(markAddedWords("My mother doesn't understand.", ['MOTHER', "DON'T UNDERSTAND"]).filter(p => p.added).map(p => p.text), ['My']);
+  assert.deepEqual(markAddedWords('Is the coffee hot?', ['COFFEE', 'HOT']).filter(p => p.added).map(p => p.text), ['Is', 'the']);
+  assert.deepEqual(markAddedWords('Slower, please.', ['SLOW']).filter(p => p.added).map(p => p.text), ['please.']);
+  // Practice tips point the right way: hand lower than the examples -> raise it;
+  // one hand for a two-handed sign -> use both; an attempt like the examples -> no tip.
+  const { signTips } = await import('../src/vocab.js');
+  const profile = { mean: { twoHands: .9, height: 1, side: 2, movement: 3, fingers: [1.5, 2, 2, 2, 2] }, std: { twoHands: .1, height: .3, side: .3, movement: 1, fingers: [.1, .1, .1, .1, .1] } };
+  const like = { face: 1, handInView: 1, twoHands: .9, height: 1, side: 2, movement: 3, fingers: [1.5, 2, 2, 2, 2] };
+  const tips = summary => Object.fromEntries(signTips(summary, profile).map(c => [c.id, c.tip]));
+  assert.deepEqual(Object.values(tips(like)).filter(Boolean), []);
+  assert.match(tips({ ...like, height: 4 }).position, /Raise/);
+  assert.match(tips({ ...like, height: -2 }).position, /Lower/);
+  assert.match(tips({ ...like, twoHands: 0 }).hands, /both hands/);
+  assert.match(tips({ ...like, fingers: [1.5, .8, .8, .8, 2] }).shape, /Open your hand/);
+  assert.match(tips({ ...like, fingers: [1.5, 1, 2, 2, 2] }).shape, /Straighten your index finger/);
+  assert.match(tips({ ...like, movement: .2 }).movement, /bigger/);
+});

@@ -36,6 +36,17 @@ These are explicit experimental engineering choices, **not an expert-approved ca
 - `npm run report:webcam` prints what the browser showed for each session plus every failure's reason, score, novelty distance and tracking coverage.
 - `node training/replay-webcam-test.mjs` runs the real Webcam test page with held-out FSL-105 clips at the camera boundary and writes to `.tools/webcam-replay` (never `.tools/webcam`). Read it with `FSL_WEBCAM_DIR=.tools/webcam-replay npm run report:webcam`. Do not set `FSL_WEBCAM_DIR` when training.
 
+## 2026-11-03: Interpret vocabulary (25 signs + other)
+
+The Interpret page (`#interpret`) uses a separate model in `public/models/vocab`. It is an experimental demo, not a translator.
+
+- `python3 training/vocab-samples.py` selects 834 FSL-105 clips into `.tools/fsl105/vocab-samples.json`: 25 vocabulary signs (300 train / 110 calibration / 101 test) and other signs for an "other" class (123 / 41 / 82 seen-class test), plus 77 test clips of signs never used in training ("unseen"). The duplicate `clips/23/8.MOV` is dropped.
+- `npm run extract:vocab` runs hand **and face** tracking on every clip and writes 24 rows × 133 features (face flag + two hand slots of 66, hands relative to the nose and scaled by eye distance) to `.tools/fsl105/vocab-features.json`.
+- `npm run train:vocab` trains a per-frame dense layer + two Conv1D layers (26 outputs) with training-only augmentation (trim, mirror, shift/scale, jitter). Per-sign minimum scores come from calibration rows only. About 22 s per epoch on tfjs CPU; the first run stopped early at epoch 34 (best 26). Recordings from Interpret → Record my signs (`.tools/webcam/*.jsonl`, `vocab-record-v1`) are added automatically; the newest session is held out unless `FSL_WEBCAM_HOLDOUT` says otherwise.
+- `node training/replay-interpret.mjs "GOOD MORNING,MOTHER,COFFEE" [baseURL] [screenshot.png]` plays held-out test clips back to back at the camera of the running page and prints the recognised chain and the real local-LLM sentence.
+
+First results (FSL-105 test, scored once): 25 signs **93/100 accepted correctly, 0 wrong, 7 abstained** (HOT is weakest at 1/4). Other signs: **36/158 falsely accepted as a vocabulary sign** (22/76 for unseen signs), mostly as TOMORROW, GOOD MORNING, HELLO and YESTERDAY, whose calibration thresholds are low because calibration has only 41 "other" rows. These are isolated clips from the dataset signers, not continuous signing or Jim's webcam.
+
 ## Re-run on the prepared Personal Mac
 
 ```sh

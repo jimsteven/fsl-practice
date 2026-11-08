@@ -22,7 +22,10 @@
     "test:browser": "playwright test",
     "storybook": "storybook dev -p 6006 --host 127.0.0.1 --no-open",
     "build-storybook": "storybook build",
-    "report:webcam": "node training/webcam-report.mjs"
+    "report:webcam": "node training/webcam-report.mjs",
+    "vocab:samples": "python3 training/vocab-samples.py",
+    "extract:vocab": "node training/extract.mjs vocab",
+    "train:vocab": "node training/train-vocab.mjs && node training/vocab-profiles.mjs"
   },
   "dependencies": {
     "@mediapipe/tasks-vision": "1.2.0",

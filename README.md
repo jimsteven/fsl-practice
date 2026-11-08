@@ -2,17 +2,44 @@
 
 A locally deployed personal Filipino Sign Language practice desk, **not a translator or signing assessment**. Project: `/Users/jim/projects/fsl-practice` on Jim’s Personal Mac. Original brief: `fsl-build-prompt.txt`.
 
+## One-command installation (macOS, Linux, Windows)
+
+While signed into an account with access, download **Code → Download ZIP** from [jimsteven/fsl-practice](https://github.com/jimsteven/fsl-practice) and extract it to a permanent, writable folder. The repository is private: anonymous `curl`/PowerShell downloads cannot bypass GitHub access. Open a terminal in the extracted folder and run **one** command:
+
+**macOS / Linux:**
+
+```sh
+sh install.sh
+```
+
+**Windows (PowerShell):**
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
+```
+
+The installer downloads a private Node **24.11.0** runtime, installs locked npm dependencies, downloads hash-pinned MediaPipe hand/face assets, verifies the bundled attributed reference videos, builds the app, installs hash-pinned Ollama **0.40.15** if no local Ollama service is running, and pulls **gemma3:12b**. It starts the app and opens **http://localhost:5173**. No Git, Python, FFmpeg, global Node, administrator rights or cloud AI account is required. The trained recognition models and 30 reference videos are already included; normal installation does **not** download the research dataset or retrain anything.
+
+Requirements: internet for the initial installation, a camera and current Chrome/Edge, a 64-bit x64 or ARM64 machine, macOS 14+, Windows 10 22H2+, or glibc Linux (such as Ubuntu 22.04+). Linux/macOS need the standard `curl`, `tar` and SHA-256 tools. Alpine/musl and 32-bit systems are not supported. Allow roughly **25 GB free disk and 16 GB RAM** for the default LLM; downloads are several GB and CPU-only interpretation can be very slow. GPU drivers and optional AMD/Jetson acceleration bundles are **not** installed; unsupported GPU setups use CPU inference. Recognition still runs locally in the browser.
+
+Dependencies/logs live in `.tools/` (ignored by Git); Ollama keeps model downloads in its normal user cache (`~/.ollama` or `%USERPROFILE%\.ollama`). Existing running Ollama is reused, not replaced. Nothing is added to system startup by these installers. The servers run on loopback and remain running after the terminal closes; the OS stops them at shutdown. Keep the extracted folder in place.
+
+**Next launch:** use the same command with `--start` appended. To install without opening/running the app, append `--no-start` (Ollama still starts to download the model). `--no-open` starts without opening a browser. `--skip-llm` skips Ollama/model downloads and leaves camera practice and sign recognition available without sentence generation; include it again when launching. For smaller PCs set `FSL_LLM_MODEL=gemma3:4b` before installation and each launch (PowerShell: `$env:FSL_LLM_MODEL='gemma3:4b'`); this trades sentence quality for lower memory use. Set `FSL_PORT` to use a different port if another app occupies 5173. Rerun the install command after updating the source; model pulls resume/reuse existing downloads, and `.tools/webcam` recordings are kept. Stop a running older app before rebuilding/updating it. Logs: `.tools/local-server.log`, `.tools/ollama.log`.
+
+All downloads are from the official Node, Google MediaPipe, npm and Ollama endpoints. Node archives are checked against the official checksum manifest before extraction; Ollama archives have reviewed SHA-256 pins in `scripts/ollama-assets.json`. No upstream installer scripts are piped into a shell, and no package-manager or GPU-driver changes are made.
+
 ## Open it
 
 On the **Personal Mac**, visit **http://localhost:5173**, or double-click `start.command` in this folder. A macOS login service, `com.jim.fsl-practice`, serves the built app on loopback and starts at login. It does not expose the app to the internet or other devices. The camera requires localhost/HTTPS and an explicit permission grant.
 
-The project-local Node **26.13.0** arm64 runtime is under `.tools/`; it was checked against Node’s published checksum. No global Node/Homebrew install, Firebase project, cloud deployment, commit or push was performed.
+The original Personal Mac setup uses a project-local Node **26.13.0** arm64 runtime under `.tools/`, checked against Node’s published checksum. The portable installer above uses its own pinned Node 24 runtime and does not change that existing service. GitHub source: [jimsteven/fsl-practice](https://github.com/jimsteven/fsl-practice). The separately hosted web deployment is not updated by installation or a GitHub push.
 
 ## What is usable
 
 - **30 attributed local FSL-105 videos:** 10 greetings, 10 everyday communication signs, and numbers 1–10. Native play/pause and 0.5×/0.75× speed. Source orientation is not mirrored. These are published research examples, not a complete approved teaching curriculum.
 - **Automatic camera/MediaPipe tracking in Practice**, with up to two hands and 21 points per hand. Chrome reuses its saved site permission; if permission is absent or expired, Chrome must ask again. No Start/Stop camera controls: leave Practice to release the camera. Preview mirroring and aligned landmarks are display options. No microphone, recording or frame uploads.
 - **Guided practice.** Begin attempt runs a three-second countdown before the timed check. The camera caption gives framing cues (no hand, two hands for a number, hand outside the frame, too small, too close, good position); they describe framing only, never signing correctness. After a check, **Try again** repeats it and **Next sign** moves to the next reference in the same group (One→Five cycle for numbers). Unsaved summaries are discarded when moving on.
+- **Interpret (`#interpret`), experimental demo for personal practice.** Inspired by a sign-to-sentence prototype reel: sign one of 25 FSL-105 words, rest your hands so it locks in as a gloss pill, and after a 2-second rest (or Enter / Interpret now) a local LLM suggests an English sentence. Words the LLM added are underlined. MediaPipe face landmarks anchor hand positions and give a heuristic expression tag per sign (Happy, Sad, Neutral, Angry, Questioning, Skeptical), which the LLM uses for questions and tone. **Check my signs** shows one target word with its reference video; sign it and lower your hands, and the camera shows **Good job!** when the model recognizes that word, **Almost!** when it leans that way, or **Try again**. Every miss gets a tip from comparing your try with the FSL-105 examples of that word (hands, position, movement size, handshape, staying in view), a checklist, and a closeness step (no numbers). Tips and verdicts are not a teacher's judgement. **Record my signs** captures your own samples of each word (2 rounds × 25, landmarks only, saved to `.tools/webcam`) for retraining with `npm run train:vocab`. The LLM runs only on this Mac (Ollama, `gemma3:12b` by default, about 5–7 s per sentence; `FSL_LLM_MODEL=gemma3:4b` is about 2 s but leaks tags like "skeptical" into sentences); the public web version shows the recognized glosses without interpretation. Not a translator: isolated-sign vocabulary, no FSL grammar model, suggestions are often wrong.
 - **Webcam test (`#test`).** A guided four-minute check of the experimental model on your own webcam: numbers One–Five three times each, six non-number signs and two no-hand checks, in shuffled rounds with countdowns and automatic advance. Correct suggestions, wrong suggestions and refusals are counted separately, with a per-sign table. Each check's hand landmarks and model answer are saved through the local server to `.tools/webcam/<session>.jsonl` (no video), so failures can be analysed and the model re-scored or retrained without signing again. Pause, Redo last check and End test now are available.
 - **Automatic experimental CNN matching for number focuses 1–5.** Select a supported number and the model loads automatically, then Begin attempt starts a four-second check after the countdown. Other signs use tracking only. Suggestions may be declined, or wrong; they are not correctness scores. Missing/incompatible/tampered model assets fall back to tracking with an explicit Retry recognition action.
 - **Deliberately saved sessions survive reload.** IndexedDB stores aggregate observations, optional model suggestions and review notes—not video or landmark histories. (Only the Webcam test page saves landmarks, to the project folder.) The log keeps up to 200 attempts from the last 30 days, pruning when opened/updated. Sessions supports JSON export and confirmed deletion.
@@ -59,6 +86,8 @@ python3 -m unittest discover -s training -p 'test_*.py'
 STORYBOOK_DISABLE_TELEMETRY=1 npm run build-storybook
 npm audit
 ```
+
+Local LLM: Ollama v0.40.13 (release tarball checked against its published SHA-256) lives in `~/.local/ollama` and runs as the login service `com.jim.ollama` on 127.0.0.1:11434 with `gemma3:12b` (and `gemma3:4b` pulled as the faster fallback). The FSL server calls it only from `POST /api/interpret`, which accepts same-origin requests with known glosses and expression tags and retries once if the model drops a sign. Stop it with `launchctl bootout gui/$(id -u)/com.jim.ollama`.
 
 `npm run stop:local` stops this login’s service; it starts again at the next login. `npm run preview` runs the built server in a terminal instead. Use only one server on port 5173. For source development, stop the service and run `npm run dev`; restart the service afterward. Logs: `.tools/local-server.log`. Health/build identifier: `/health.json`. No source, training cache or browser records are served by the production server.
 

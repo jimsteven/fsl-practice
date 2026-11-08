@@ -5,7 +5,7 @@ import { CameraSession, drawLandmarks } from './tracking.js';
 // on hide or pagehide, and resumes on return unless an error needs a retry.
 // `onFrame(validHands, result)` sees every tracking result; `onInactive()` runs
 // whenever tracking stops so callers can close an attempt in progress.
-export function useCameraTracking({ overlay, onFrame, onInactive }) {
+export function useCameraTracking({ overlay, onFrame, onInactive, face = false }) {
   const video = useRef(null);
   const canvas = useRef(null);
   const controller = useRef(null);
@@ -28,6 +28,7 @@ export function useCameraTracking({ overlay, onFrame, onInactive }) {
     let failed = false;
     const session = new CameraSession({
       video: video.current,
+      face,
       onState: next => {
         if (next.phase === 'error') failed = true;
         if (next.phase === 'loading') failed = false;
@@ -47,7 +48,7 @@ export function useCameraTracking({ overlay, onFrame, onInactive }) {
           canvas.current.height = height;
           setAspect(width / height);
           const color = getComputedStyle(document.documentElement).getPropertyValue('--landmark').trim();
-          drawLandmarks(canvas.current, handlers.current.overlay ? validHands : [], color);
+          drawLandmarks(canvas.current, handlers.current.overlay ? validHands : [], color, handlers.current.overlay ? result.face : null);
         }
         handlers.current.onFrame?.(validHands, result);
         if (performance.now() - lastRender.current > 300) {
